@@ -9,10 +9,10 @@
 import UIKit
 
 class TCMainCollectionDataDelegate: NSObject {
-    var vc: ViewController
+    var vc: TCMainViewController
     
     init?(fromViewController vc: UIViewController) {
-        guard let v = vc as? ViewController else { return nil }
+        guard let v = vc as? TCMainViewController else { return nil }
         self.vc = v
     }
 }

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
+		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
+		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
+		C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */; };
+		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
-		C4F5E3502022C4B800223DCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34F2022C4B800223DCC /* ViewController.swift */; };
+		C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */; };
 		C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E3512022C4B800223DCC /* Main.storyboard */; };
 		C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E3542022C4B800223DCC /* TCMS.xcdatamodeld */; };
 		C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E3572022C4B800223DCC /* Assets.xcassets */; };
@@ -21,9 +26,14 @@
 		46B7CB35A39246BD4403D30A /* Pods-TCMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCMS/Pods-TCMS.release.xcconfig"; sourceTree = "<group>"; };
 		AD3802278D7461DF2D17E7BB /* Pods-TCMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCMS/Pods-TCMS.debug.xcconfig"; sourceTree = "<group>"; };
 		B9044F10C2C18D550E7C531B /* Pods_TCMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
+		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
+		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
+		C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCStoryboardFactory.swift; sourceTree = "<group>"; };
+		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F5E34D2022C4B800223DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4F5E34F2022C4B800223DCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainViewController.swift; sourceTree = "<group>"; };
 		C4F5E3522022C4B800223DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4F5E3552022C4B800223DCC /* TCMS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TCMS.xcdatamodel; sourceTree = "<group>"; };
 		C4F5E3572022C4B800223DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +63,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C490F40E2026ABE600C370B2 /* Drawers */ = {
+			isa = PBXGroup;
+			children = (
+				C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */,
+				C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */,
+			);
+			path = Drawers;
+			sourceTree = "<group>";
+		};
+		C490F4192026B1DB00C370B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C490F40E2026ABE600C370B2 /* Drawers */,
+				C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */,
+				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C490F41A2026B1E400C370B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C490F41C2026B21200C370B2 /* Misc */,
+				C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */,
+				C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C490F41B2026B1E900C370B2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5E3542022C4B800223DCC /* TCMS.xcdatamodeld */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C490F41C2026B21200C370B2 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5E3512022C4B800223DCC /* Main.storyboard */,
+				C490F40C2026ABD000C370B2 /* Drawer.storyboard */,
+				C4F5E3592022C4B800223DCC /* LaunchScreen.storyboard */,
+				C4F5E3572022C4B800223DCC /* Assets.xcassets */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		C4F5E3412022C4B700223DCC = {
 			isa = PBXGroup;
 			children = (
@@ -75,13 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				C4F5E34D2022C4B800223DCC /* AppDelegate.swift */,
-				C4F5E34F2022C4B800223DCC /* ViewController.swift */,
-				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
-				C4F5E3512022C4B800223DCC /* Main.storyboard */,
-				C4F5E3572022C4B800223DCC /* Assets.xcassets */,
-				C4F5E3592022C4B800223DCC /* LaunchScreen.storyboard */,
 				C4F5E35C2022C4B800223DCC /* Info.plist */,
-				C4F5E3542022C4B800223DCC /* TCMS.xcdatamodeld */,
+				C490F41A2026B1E400C370B2 /* Views */,
+				C490F4192026B1DB00C370B2 /* ViewControllers */,
+				C490F41B2026B1E900C370B2 /* ViewModels */,
 			);
 			path = TCMS;
 			sourceTree = "<group>";
@@ -157,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
+				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
 				C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
 			);
@@ -176,6 +232,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -188,6 +245,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -239,10 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F5E3502022C4B800223DCC /* ViewController.swift in Sources */,
+				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
+				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
+				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
+				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
+				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JF6RD64R9G;
 				INFOPLIST_FILE = TCMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ac.TCMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -399,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JF6RD64R9G;
 				INFOPLIST_FILE = TCMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ac.TCMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

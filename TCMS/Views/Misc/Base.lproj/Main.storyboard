@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="66L-CZ-prP">
             <objects>
-                <viewController id="xVh-OO-Tj0" customClass="ViewController" customModule="TCMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="xVh-OO-Tj0" customClass="TCMainViewController" customModule="TCMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LhD-uB-L2U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvI-PE-p9K" userLabel="headerContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cw-di-AeO" userLabel="mainHeaderView" customClass="MBMainHeaderView" customModule="MBNA" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cw-di-AeO" userLabel="mainHeaderView" customClass="MBMainHeaderView" customModule="TCMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-tm-ylf" userLabel="cardButton">
@@ -31,7 +31,10 @@
                                                     <constraint firstAttribute="width" constant="50" id="ASo-nE-uHG"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="myaccounts_icon_white"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="leftBarButtonTapped:" destination="xVh-OO-Tj0" eventType="touchUpInside" id="lr1-wJ-5wp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZY-D2-0dN" userLabel="menuButton">
                                                 <rect key="frame" x="325" y="0.0" width="50" height="44"/>
@@ -39,7 +42,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="1bP-3o-Bn6"/>
                                                 </constraints>
-                                                <state key="normal" image="Setting_Icon"/>
+                                                <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +77,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kCollectionCell" id="buV-86-hve" userLabel="kMBAccountCollectionCell2" customClass="MBAccountCollectionCell2" customModule="MBNA" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kCollectionCell" id="buV-86-hve" userLabel="kMBAccountCollectionCell2" customClass="MBAccountCollectionCell2" customModule="TCMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20" width="350" height="210"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -198,8 +201,4 @@
             <point key="canvasLocation" x="1373.5999999999999" y="17.541229385307346"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Setting_Icon" width="16" height="16"/>
-        <image name="myaccounts_icon_white" width="16" height="16"/>
-    </resources>
 </document>

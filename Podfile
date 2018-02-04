@@ -11,6 +11,7 @@ target 'TCMS' do
         # Pods for SnackableTV
         # UI
         pod 'SDWebImage'
+        pod 'KYDrawerController'
         
         # Coding
         pod 'RxSwift'

@@ -9,7 +9,11 @@
 import UIKit
 import ACKit
 
-class ViewController: UIViewController {
+class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
+    
+    @IBAction func leftBarButtonTapped(_ sender: Any) {
+        viewDelegate?.didTriggerToggleButton()
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +25,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var pageControlCell: UITableViewCell!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var viewDelegate: TCDrawerMasterViewControllerDelegate?
     
 //    var observerTokenBag = ACNoteObserverTokenBag()
     private lazy var collectionDataDelegate: TCMainCollectionDataDelegate? = {
@@ -50,7 +56,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     private struct TableCellRowInfo {
         var height: CGFloat
