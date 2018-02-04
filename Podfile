@@ -12,6 +12,7 @@ target 'TCMS' do
         # UI
         pod 'SDWebImage'
         pod 'KYDrawerController'
+        pod 'JTAppleCalendar'
         
         # Coding
         pod 'RxSwift'

@@ -75,12 +75,9 @@ class TCDrawerMasterViewController: UINavigationController {
     func presentDrawerItemViewController(drawerItem: TCDrawerItem) {
         let vc = TCStoryboardFactory.storyboard(byFileName: drawerItem.storyboardFileName)?.instantiateViewController(withIdentifier: drawerItem.storyboardID)
       
-        if let navVC = vc as? UINavigationController,
-            let rootVC = navVC.viewControllers.first,
-            let drawerItemVC = rootVC as? TCDrawerItemViewControllerType
-        {
+        if let drawerItemVC = vc as? TCDrawerItemViewControllerType {
             drawerItemVC.viewDelegate = self
-            self.viewControllers = [rootVC]
+            self.viewControllers = [vc!]
         }
     }
 }
@@ -95,7 +92,8 @@ extension TCDrawerMasterViewController: TCDrawerViewControllerDelegate {
         drawerVC.selectedDrawerItem = self.selectedDrawerItem
         drawerVC.tableView?.reloadData()
         
-        self.setDrawerOpeningState(.closed)
+        presentDrawerItemViewController(drawerItem: drawerItem)
+        setDrawerOpeningState(.closed)
     }
 }
 

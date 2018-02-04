@@ -40,21 +40,15 @@ class TCDrawerViewController: UIViewController {
     static let drawerItems: [TCDrawerItem] = [
         TCDrawerItem(normalImageName: "icTimers",
                      selectedImageName: "icTimersOn",
-                     title: "Boss Timers",
-                     storyboardFileName: "Timer",
-                     storyboardID: "timerNavVC"),
+                     title: "News",
+                     storyboardFileName: "Main",
+                     storyboardID: "mainVC"),
         
         TCDrawerItem(normalImageName: "icCharacters",
                      selectedImageName: "icCharactersOn",
-                     title: "My Characters",
-                     storyboardFileName: "Characters",
-                     storyboardID: "charactersNavVC"),
-        
-        TCDrawerItem(normalImageName: "icStorage",
-                     selectedImageName: "icStorageOn",
-                     title: "Storage",
-                     storyboardFileName: "Storage",
-                     storyboardID: "storageNavVC")]
+                     title: "Calendar",
+                     storyboardFileName: "Main",
+                     storyboardID: "calendarVC")]
 
     
     weak var delegate: TCDrawerViewControllerDelegate?

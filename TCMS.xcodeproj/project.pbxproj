@@ -12,6 +12,8 @@
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
 		C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */; };
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
+		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
+		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
 		C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */; };
 		C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E3512022C4B800223DCC /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
 		C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCStoryboardFactory.swift; sourceTree = "<group>"; };
 		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
+		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
+		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F5E34D2022C4B800223DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				C490F40E2026ABE600C370B2 /* Drawers */,
 				C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */,
 				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
+				C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				C490F41C2026B21200C370B2 /* Misc */,
 				C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */,
 				C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */,
+				C490F41F2026CCD700C370B2 /* CustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -245,6 +252,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -299,9 +307,11 @@
 			files = (
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
+				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
+				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
