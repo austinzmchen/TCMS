@@ -14,6 +14,8 @@
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
+		C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */; };
+		C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
 		C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */; };
 		C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E3512022C4B800223DCC /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAboutUsViewController.swift; sourceTree = "<group>"; };
+		C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainTopCollectionCell.swift; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F5E34D2022C4B800223DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */,
 				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
 				C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */,
+				C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,6 +95,8 @@
 		C490F41A2026B1E400C370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4E0E3EB2090219C0031BBB8 /* CollectionView */,
+				C4E0E3EA2090218E0031BBB8 /* TableView */,
 				C490F41C2026B21200C370B2 /* Misc */,
 				C490F4152026AD0C00C370B2 /* TCStoryboardFactory.swift */,
 				C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */,
@@ -115,6 +122,21 @@
 				C4F5E3572022C4B800223DCC /* Assets.xcassets */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		C4E0E3EA2090218E0031BBB8 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		C4E0E3EB2090219C0031BBB8 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		C4F5E3412022C4B700223DCC = {
@@ -308,12 +330,14 @@
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
+				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
+				C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

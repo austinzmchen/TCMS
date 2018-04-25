@@ -41,7 +41,9 @@ class TCDrawerMasterViewController: UINavigationController {
         
         switch state {
         case .open:
-            self.present(drawerVC, animated: false, completion: {
+            drawerVC.modalTransitionStyle = .crossDissolve
+            drawerVC.modalPresentationStyle = .overCurrentContext
+            self.present(drawerVC, animated: animated, completion: {
                 if let c = completion { c(true) }
             }) // if using animated true, there will be a glitch where two phase, first phase fading in, second phase blurring
         case .closed:

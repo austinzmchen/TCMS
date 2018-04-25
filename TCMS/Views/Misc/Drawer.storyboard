@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gGd-Qr-ksV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gGd-Qr-ksV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,21 +32,21 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT8-ct-ZB1" userLabel="closeButton">
-                                        <rect key="frame" x="4" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="4" y="0.0" width="60" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="W0p-pJ-BV4"/>
-                                            <constraint firstAttribute="width" constant="40" id="ep6-ti-7cq"/>
+                                            <constraint firstAttribute="width" constant="60" id="ep6-ti-7cq"/>
                                         </constraints>
                                         <state key="normal" title="close"/>
                                         <connections>
                                             <action selector="closeButtonTapped:" destination="rZF-sR-I6Z" eventType="touchUpInside" id="vbI-DQ-79B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6t-IQ-fEe" userLabel="settingsButton">
-                                        <rect key="frame" x="331" y="0.0" width="40" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6t-IQ-fEe" userLabel="settingsButton">
+                                        <rect key="frame" x="291" y="0.0" width="80" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3AK-r2-QDD"/>
-                                            <constraint firstAttribute="width" constant="40" id="pOf-bB-veu"/>
+                                            <constraint firstAttribute="width" constant="80" id="pOf-bB-veu"/>
                                         </constraints>
                                         <state key="normal" title="setting"/>
                                         <connections>
@@ -86,8 +86,8 @@
                                                         <constraint firstAttribute="width" constant="25" id="x56-Pv-Fdw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boss Timers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-dE-jee">
-                                                    <rect key="frame" x="60" y="13" width="112" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-dE-jee">
+                                                    <rect key="frame" x="60" y="13" width="55" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -138,11 +138,13 @@
         <!--Drawer Master View Controller-->
         <scene sceneID="w4l-Xe-XLR">
             <objects>
-                <navigationController storyboardIdentifier="drawerMasterVC" id="gGd-Qr-ksV" customClass="TCDrawerMasterViewController" customModule="TCMS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="drawerMasterVC" navigationBarHidden="YES" id="gGd-Qr-ksV" customClass="TCDrawerMasterViewController" customModule="TCMS" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="csx-6I-iCc">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3pH-mL-hP4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="rZF-sR-I6Z" kind="custom" id="vzu-R3-ESK"/>
                         <segue destination="uUF-1w-9PS" kind="custom" id="cM2-q3-miO"/>

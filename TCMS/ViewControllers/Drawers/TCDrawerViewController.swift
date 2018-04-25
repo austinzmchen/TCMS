@@ -40,15 +40,24 @@ class TCDrawerViewController: UIViewController {
     static let drawerItems: [TCDrawerItem] = [
         TCDrawerItem(normalImageName: "icTimers",
                      selectedImageName: "icTimersOn",
-                     title: "News",
+                     title: "Home",
                      storyboardFileName: "Main",
                      storyboardID: "mainVC"),
-        
         TCDrawerItem(normalImageName: "icCharacters",
                      selectedImageName: "icCharactersOn",
                      title: "Calendar",
                      storyboardFileName: "Main",
-                     storyboardID: "calendarVC")]
+                     storyboardID: "calendarVC"),
+        TCDrawerItem(normalImageName: "icCharacters",
+                     selectedImageName: "icCharactersOn",
+                     title: "Help",
+                     storyboardFileName: "Main",
+                     storyboardID: "calendarVC"),
+        TCDrawerItem(normalImageName: "icCharacters",
+                     selectedImageName: "icCharactersOn",
+                     title: "About Us",
+                     storyboardFileName: "Main",
+                     storyboardID: "aboutusVC")]
 
     
     weak var delegate: TCDrawerViewControllerDelegate?
@@ -87,6 +96,12 @@ extension TCDrawerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = type(of: self).drawerItems[indexPath.row]
+        if item.title ~= "Help" {
+            UIApplication.shared.open(URL(string: "mailto:help@mytyria.com")!, options: [:]) { (finished) in
+                print("finished: \(finished)")
+            }
+            return
+        }
         self.delegate?.didSelect(drawerItem: item, atIndex: indexPath.row)
         
         tableView.deselectRow(at: indexPath, animated: true)

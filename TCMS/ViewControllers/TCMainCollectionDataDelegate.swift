@@ -23,7 +23,8 @@ extension TCMainCollectionDataDelegate: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kCollectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kCollectionCell", for: indexPath) as! TCMainTopCollectionCell
+        cell.imgView.image = UIImage(named: "IMG_9941")
         return cell
     }
     
