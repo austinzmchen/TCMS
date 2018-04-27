@@ -64,6 +64,9 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         
         // set contentInset top, makes contentOffset y to start -kHeight
         tableView.contentInset = UIEdgeInsets(top: kHeight + kHeight2, left: 0, bottom: 0, right: 0)
+        
+        tableView.register(UINib.init(nibName: "STTableV2Cell", bundle: nil), forCellReuseIdentifier: "kHomeTableCell1")
+        tableView.register(UINib.init(nibName: "STTableHeroCell", bundle: nil), forCellReuseIdentifier: "kHomeTableHeroCell")
     }
     
     override func viewWillLayoutSubviews() {
@@ -99,11 +102,23 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        if indexPath.row == 2 {
+            return 180
+        }
+        return 107
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "kTableCell", for: indexPath)
+        if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableHeroCell", for: indexPath) as! STTableHeroCell
+            cell.parallaxView.backgroundImageView.image = UIImage.init(named: "parallaxImage")
+            cell.parallaxView.backgroundImageView.contentMode = .scaleAspectFill
+            cell.parallaxView.parallaxScrollFactor = 0.13
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
+        cell.imgView.image = UIImage.init(named: "dummyPhoto")
+        return cell
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -144,6 +159,14 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
             f2.size.height = kHeight2
         }
         headerView2.frame = f2
+        
+        // parallax
+        tableView.visibleCells.forEach { cell in
+            guard let c = cell as? STTableHeroCell
+                else { return }
+            let rect = c.parallaxView.convert(c.parallaxView.bounds, to: self.view)
+            c.parallaxView.adjustParallax(by: rect, onVisibleBounds: self.view.bounds)
+        }
     }
 }
 

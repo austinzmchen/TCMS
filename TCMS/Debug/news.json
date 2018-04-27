@@ -1,0 +1,27 @@
+{
+    "feeds": [
+        {
+            "id": "feed1",
+            "title": "",
+            "desc": "",
+            "images": [
+            ],
+            event: "someid1"
+        },
+        {
+            "id": "feed2",
+            "title": "",
+            "desc": "",
+            "images": [
+            ],
+            event: "someid2"
+        }
+    ],
+    featured: [
+        {
+            "id": "someid1",
+            "misc": []
+        }
+    ]
+
+}

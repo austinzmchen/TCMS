@@ -24,8 +24,23 @@ extension TCMainCollectionDataDelegate: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kCollectionCell", for: indexPath) as! TCMainTopCollectionCell
-        cell.imgView.image = UIImage(named: "IMG_9941")
+        cell.imgView.image = UIImage(named: "dummyPhoto")
         return cell
+    }
+    
+    // hightlight animation
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        UIView.animate(withDuration: 0.15, animations: {
+            cell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        UIView.animate(withDuration: 0.15, animations: {
+            cell.transform = CGAffineTransform.identity
+        })
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -14,6 +14,12 @@
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
+		C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A0BD06209387BB001D1AF4 /* STTableHeroCell.xib */; };
+		C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD07209387BB001D1AF4 /* STTableV2Cell.swift */; };
+		C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD08209387BB001D1AF4 /* STTableHeroCell.swift */; };
+		C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A0BD09209387BC001D1AF4 /* STTableV2Cell.xib */; };
+		C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD1020938809001D1AF4 /* KCParallaxView.m */; };
+		C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD1220938809001D1AF4 /* UIImageView+Aldo.m */; };
 		C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */; };
 		C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
@@ -37,6 +43,15 @@
 		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C4A0BD06209387BB001D1AF4 /* STTableHeroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STTableHeroCell.xib; sourceTree = "<group>"; };
+		C4A0BD07209387BB001D1AF4 /* STTableV2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableV2Cell.swift; sourceTree = "<group>"; };
+		C4A0BD08209387BB001D1AF4 /* STTableHeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableHeroCell.swift; sourceTree = "<group>"; };
+		C4A0BD09209387BC001D1AF4 /* STTableV2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STTableV2Cell.xib; sourceTree = "<group>"; };
+		C4A0BD0F20938809001D1AF4 /* UIImageView+Aldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Aldo.h"; sourceTree = "<group>"; };
+		C4A0BD1020938809001D1AF4 /* KCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCParallaxView.m; sourceTree = "<group>"; };
+		C4A0BD1120938809001D1AF4 /* KCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCParallaxView.h; sourceTree = "<group>"; };
+		C4A0BD1220938809001D1AF4 /* UIImageView+Aldo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Aldo.m"; sourceTree = "<group>"; };
+		C4A0BD1720938962001D1AF4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAboutUsViewController.swift; sourceTree = "<group>"; };
 		C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainTopCollectionCell.swift; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +86,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C410C1C220938F8900AD0033 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		C490F40E2026ABE600C370B2 /* Drawers */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,7 @@
 		C490F41A2026B1E400C370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4A0BD0E20938809001D1AF4 /* Parallax */,
 				C4E0E3EB2090219C0031BBB8 /* CollectionView */,
 				C4E0E3EA2090218E0031BBB8 /* TableView */,
 				C490F41C2026B21200C370B2 /* Misc */,
@@ -124,9 +147,24 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		C4A0BD0E20938809001D1AF4 /* Parallax */ = {
+			isa = PBXGroup;
+			children = (
+				C4A0BD1120938809001D1AF4 /* KCParallaxView.h */,
+				C4A0BD1020938809001D1AF4 /* KCParallaxView.m */,
+				C4A0BD0F20938809001D1AF4 /* UIImageView+Aldo.h */,
+				C4A0BD1220938809001D1AF4 /* UIImageView+Aldo.m */,
+			);
+			path = Parallax;
+			sourceTree = "<group>";
+		};
 		C4E0E3EA2090218E0031BBB8 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				C4A0BD08209387BB001D1AF4 /* STTableHeroCell.swift */,
+				C4A0BD06209387BB001D1AF4 /* STTableHeroCell.xib */,
+				C4A0BD07209387BB001D1AF4 /* STTableV2Cell.swift */,
+				C4A0BD09209387BC001D1AF4 /* STTableV2Cell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -161,10 +199,12 @@
 			isa = PBXGroup;
 			children = (
 				C4F5E34D2022C4B800223DCC /* AppDelegate.swift */,
+				C4A0BD1720938962001D1AF4 /* Bridging-Header.h */,
 				C4F5E35C2022C4B800223DCC /* Info.plist */,
 				C490F41A2026B1E400C370B2 /* Views */,
 				C490F4192026B1DB00C370B2 /* ViewControllers */,
 				C490F41B2026B1E900C370B2 /* ViewModels */,
+				C410C1C220938F8900AD0033 /* Debug */,
 			);
 			path = TCMS;
 			sourceTree = "<group>";
@@ -241,6 +281,8 @@
 			files = (
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
+				C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */,
+				C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */,
 				C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
 			);
@@ -330,6 +372,8 @@
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
+				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
+				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
@@ -338,6 +382,8 @@
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
 				C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */,
+				C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */,
+				C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +463,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "TCMS/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -466,6 +513,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TCMS/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
