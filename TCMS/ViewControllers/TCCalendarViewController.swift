@@ -21,6 +21,8 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
+    
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
@@ -28,9 +30,22 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     
     let formatter = DateFormatter()
     
+    private var dateEventsDict = [String: [String]]()
+    private var selectedDate: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        dateEventsDict = [
+            "2018-04-24": ["abc", "def"],
+            "2018-04-25": ["ghi"]
+        ]
+        
+        calendarView.scrollToDate(Date.init())
     }
     
     func setupCalendarView() {
@@ -77,11 +92,6 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         self.month.text = self.formatter.string(from: date)
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 extension TCCalendarViewController: JTAppleCalendarViewDataSource {
@@ -90,8 +100,8 @@ extension TCCalendarViewController: JTAppleCalendarViewDataSource {
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
-        let startDate = formatter.date(from: "2017 01 01")!
-        let endDate = formatter.date(from: "2017 12 31")!
+        let startDate = formatter.date(from: "2018 01 01")!
+        let endDate = formatter.date(from: "2018 12 31")!
         
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
@@ -111,6 +121,10 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
         cell.dateLabel.text = cellState.text
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
+        if date.tcDate == Date().tcDate {
+            cell.selectedView.isHidden = false
+            cell.selectedView.backgroundColor = .orange
+        }
         
         return cell
     }
@@ -118,6 +132,16 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
+        print("didSelectDate: \(date)")
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "yyyy-MM-dd"
+        selectedDate = dateFormatterPrint.string(from: date)
+        tableView.reloadData()
+        
+//        if let date = dateFormatterGet.date(from: "2016-02-29 12:24:26"){
+//            print(dateFormatterPrint.string(from: date))
+//        }
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
@@ -127,6 +151,29 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
+    }
+}
+
+extension TCCalendarViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sd = selectedDate else {return 0}
+        return dateEventsDict[sd]?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kCalendarTableCell", for: indexPath)
+        
+        guard let sd = selectedDate,
+            let events = dateEventsDict[sd]
+            else {return cell}
+        
+        let name = events[indexPath.row]
+        cell.textLabel?.text = name
+        return cell
     }
 }
 
@@ -141,3 +188,11 @@ extension UIColor {
     }
 }
 
+extension Date {
+    // "2018-01-01"
+    var tcDate: String {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "yyyy-MM-dd"
+        return dateFormatterPrint.string(from: self)
+    }
+}

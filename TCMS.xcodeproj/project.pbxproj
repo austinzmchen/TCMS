@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C410C1C9209412C700AD0033 /* InteractiveAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */; };
+		C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */; };
 		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
 		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
@@ -36,6 +38,8 @@
 		46B7CB35A39246BD4403D30A /* Pods-TCMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCMS/Pods-TCMS.release.xcconfig"; sourceTree = "<group>"; };
 		AD3802278D7461DF2D17E7BB /* Pods-TCMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCMS/Pods-TCMS.debug.xcconfig"; sourceTree = "<group>"; };
 		B9044F10C2C18D550E7C531B /* Pods_TCMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveAnimatorDelegate.swift; sourceTree = "<group>"; };
+		C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InteractiveAnimatorDelegate+Factory.swift"; sourceTree = "<group>"; };
 		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
 		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
 				C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */,
 				C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */,
+				C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */,
+				C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
+				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
@@ -385,6 +392,7 @@
 				C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */,
 				C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
+				C410C1C9209412C700AD0033 /* InteractiveAnimatorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
