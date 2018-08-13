@@ -42,7 +42,7 @@ class TCAboutUsViewController: UIViewController, TCDrawerItemViewControllerType 
         mapRegion.span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
 //        mapView.setRegion(mapRegion, animated: true)
         
-        mapView.setVisibleMapRect(MKMapRectForCoordinateRegion(region: mapRegion), edgePadding: UIEdgeInsetsMake(0.0, 0.0, 200.0, 0.0), animated: true)
+        mapView.setVisibleMapRect(MKMapRectForCoordinateRegion(region: mapRegion), edgePadding: UIEdgeInsets(top: 0.0, left: 0.0, bottom: 200.0, right: 0.0), animated: true)
 
         // interactive pan
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped(recognizer:)) )

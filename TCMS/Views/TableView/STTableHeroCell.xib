@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,14 +35,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBE-59-RW4" userLabel="separator">
-                        <rect key="frame" x="10" y="179" width="300" height="1"/>
+                        <rect key="frame" x="10" y="178.5" width="300" height="1"/>
                         <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.97647058823529409" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="JQr-LA-ill"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="NN2-Vb-b8V" secondAttribute="bottom" constant="19.5" id="9A8-YE-TsD"/>
                     <constraint firstAttribute="trailing" secondItem="fBE-59-RW4" secondAttribute="trailing" constant="10" id="Otc-sS-2at"/>
@@ -58,7 +58,7 @@
                     <constraint firstItem="cWA-WY-vEY" firstAttribute="leading" secondItem="NN2-Vb-b8V" secondAttribute="leading" constant="15" id="zgm-hx-ruf"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="parallaxView" destination="NN2-Vb-b8V" id="1V2-gD-gYH"/>
                 <outlet property="subTitleLabel" destination="cWA-WY-vEY" id="87X-5M-rTh"/>

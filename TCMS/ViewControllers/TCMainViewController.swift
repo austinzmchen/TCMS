@@ -11,6 +11,7 @@ import ACKit
 
 class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
     
+    @IBOutlet weak var leftBarButton: UIButton!
     @IBAction func leftBarButtonTapped(_ sender: Any) {
         viewDelegate?.didTriggerToggleButton()
     }
@@ -32,6 +33,9 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
     private lazy var collectionDataDelegate: TCMainCollectionDataDelegate? = {
         return TCMainCollectionDataDelegate(fromViewController: self)
     }()
+    
+    private var remote = TCEventRemote(remoteSession: nil)
+    private var events: [TCJsonEvent] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +71,15 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         
         tableView.register(UINib.init(nibName: "STTableV2Cell", bundle: nil), forCellReuseIdentifier: "kHomeTableCell1")
         tableView.register(UINib.init(nibName: "STTableHeroCell", bundle: nil), forCellReuseIdentifier: "kHomeTableHeroCell")
+        
+        remote.fetchCollections(byPath: "") { (result) in
+            if case .success(let value) = result {
+                DispatchQueue.main.async {
+                    self.events = value.data
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -98,7 +111,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -116,8 +129,11 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.parallaxView.parallaxScrollFactor = 0.13
             return cell
         }
+        let event = events[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
-        cell.imgView.image = UIImage.init(named: "dummyPhoto")
+        cell.imgView.sdSetImage(withString: event.images.first?.path)
+        cell.titleLabel.text = event.title
         return cell
     }
     
@@ -128,24 +144,26 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         f.origin.y = scrollView.contentOffset.y // make header view stay at top flushed
         f.size.height = max(-scrollView.contentOffset.y-kHeight2, kMinHeight)
         headerView1.frame = f
+//        print(f.size.height)
+        leftBarButton.alpha = (f.size.height - 20) / 44
         
         if -scrollView.contentOffset.y-kHeight2 < kMinHeight {
             headerView2.clipsToBounds = true
-            
-//
-//            // print(hv2Title.frame.minY)
-//            headerView.constraints.first{$0.identifier == "kTitleCstTop"}?.constant =
-//                min(-hv2Title.frame.minY,
-//                    (headerView.bounds.height + hv1Title.bounds.height) / 2.0 ) // + because kTitleCstTop is relative from the label top to superview bottom
-//
-//            blurView.alpha = headerView.constraints.first{$0.identifier == "kTitleCstTop"}!.constant /
-//                ((headerView.bounds.height + hv1Title.bounds.height) / 2.0)
+            /*
+            // print(hv2Title.frame.minY)
+            headerView.constraints.first{$0.identifier == "kTitleCstTop"}?.constant =
+                min(-hv2Title.frame.minY,
+                    (headerView.bounds.height + hv1Title.bounds.height) / 2.0 ) // + because kTitleCstTop is relative from the label top to superview bottom
+
+            blurView.alpha = headerView.constraints.first{$0.identifier == "kTitleCstTop"}!.constant /
+                ((headerView.bounds.height + hv1Title.bounds.height) / 2.0)
+             */
         }
         else if -scrollView.contentOffset.y-kHeight2 >= kMinHeight,
             kHeight >= -scrollView.contentOffset.y-kHeight2
         {
             let scale:CGFloat = (100 - (kHeight2+kHeight + scrollView.contentOffset.y)) / 100
-//            profileView.transform = CGAffineTransform(scaleX: scale, y: scale)
+            // profileView.transform = CGAffineTransform(scaleX: scale, y: scale)
             headerView2.clipsToBounds = false
         } else {
             
@@ -170,8 +188,8 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-private let kHeight: CGFloat = 64
-private let kMinHeight: CGFloat = 40
+private let kHeight: CGFloat = 44
+private let kMinHeight: CGFloat = 20
 
 private let kHeight2: CGFloat = 270
 private let kMinHeight2: CGFloat = 20

@@ -30,8 +30,9 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     
     let formatter = DateFormatter()
     
-    private var dateEventsDict = [String: [String]]()
+    private var dateEventsDict = [String: [TCJsonSchedule]]()
     private var selectedDate: String?
+    private var remote = TCScheduleRemote.init(remoteSession: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +40,6 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        dateEventsDict = [
-            "2018-04-24": ["abc", "def"],
-            "2018-04-25": ["ghi"]
-        ]
         
         calendarView.scrollToDate(Date.init())
     }
@@ -91,6 +87,26 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         self.formatter.dateFormat = "MMMM"
         self.month.text = self.formatter.string(from: date)
         
+        let fDate = visibleDates.monthDates.first!.date
+        let df = DateFormatter(withFormat: "yyyy-MM-dd'T'HH:mm:ss", locale: "en_US_POSIX")
+        let startTime = df.string(from: fDate)
+        
+        let lDate = visibleDates.monthDates.last!.date
+        let endTime = df.string(from: lDate)
+        
+        let params = "?startTime=\(startTime)&endTime=\(endTime)&pageSize=0"
+        remote.fetchCollections(byPath: "/courseSchedules" + params) { result in
+            if case .success(let value) = result {
+                DispatchQueue.main.async {
+                    let dict = Dictionary.init(grouping: value.data, by: { schedule in
+                        // to be like '2018-08-05'
+                        df.string(from: schedule.startAt!).components(separatedBy: "T").first!
+                    })
+                    self.dateEventsDict.merge(dict, uniquingKeysWith: { (_, new) -> [TCJsonSchedule] in new })
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }
 
@@ -109,6 +125,7 @@ extension TCCalendarViewController: JTAppleCalendarViewDataSource {
 }
 
 extension TCCalendarViewController: JTAppleCalendarViewDelegate {
+    
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         
     }
@@ -172,7 +189,7 @@ extension TCCalendarViewController: UITableViewDataSource, UITableViewDelegate {
             else {return cell}
         
         let name = events[indexPath.row]
-        cell.textLabel?.text = name
+        cell.textLabel?.text = name.desc
         return cell
     }
 }

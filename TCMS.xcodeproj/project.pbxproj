@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		C410C1C9209412C700AD0033 /* InteractiveAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */; };
 		C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */; };
+		C464D121211FDB5700033106 /* TCSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D120211FDB5700033106 /* TCSyncCoordinator.swift */; };
+		C464D124211FDC1B00033106 /* TCEventProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D123211FDC1B00033106 /* TCEventProcessor.swift */; };
+		C464D126211FDDDF00033106 /* UIImageView+SDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */; };
+		C464D1282120A4B000033106 /* TCJsonSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D1272120A4B000033106 /* TCJsonSchedule.swift */; };
+		C464D12A2120A6B900033106 /* TCScheduleRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D1292120A6B900033106 /* TCScheduleRemote.swift */; };
 		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
 		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
@@ -16,6 +21,10 @@
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
+		C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61C9211F817B00A94667 /* TCEventRemote.swift */; };
+		C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CB211F827300A94667 /* TCJsonEvent.swift */; };
+		C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CD211F834100A94667 /* TCJsonImage.swift */; };
+		C49F61D0211F83EF00A94667 /* TCJsonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CF211F83EF00A94667 /* TCJsonResult.swift */; };
 		C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A0BD06209387BB001D1AF4 /* STTableHeroCell.xib */; };
 		C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD07209387BB001D1AF4 /* STTableV2Cell.swift */; };
 		C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD08209387BB001D1AF4 /* STTableHeroCell.swift */; };
@@ -40,6 +49,11 @@
 		B9044F10C2C18D550E7C531B /* Pods_TCMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveAnimatorDelegate.swift; sourceTree = "<group>"; };
 		C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InteractiveAnimatorDelegate+Factory.swift"; sourceTree = "<group>"; };
+		C464D120211FDB5700033106 /* TCSyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSyncCoordinator.swift; sourceTree = "<group>"; };
+		C464D123211FDC1B00033106 /* TCEventProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEventProcessor.swift; sourceTree = "<group>"; };
+		C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SDWebImage.swift"; sourceTree = "<group>"; };
+		C464D1272120A4B000033106 /* TCJsonSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonSchedule.swift; sourceTree = "<group>"; };
+		C464D1292120A6B900033106 /* TCScheduleRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCScheduleRemote.swift; sourceTree = "<group>"; };
 		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
 		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,10 @@
 		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C49F61C9211F817B00A94667 /* TCEventRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEventRemote.swift; sourceTree = "<group>"; };
+		C49F61CB211F827300A94667 /* TCJsonEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonEvent.swift; sourceTree = "<group>"; };
+		C49F61CD211F834100A94667 /* TCJsonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonImage.swift; sourceTree = "<group>"; };
+		C49F61CF211F83EF00A94667 /* TCJsonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonResult.swift; sourceTree = "<group>"; };
 		C4A0BD06209387BB001D1AF4 /* STTableHeroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STTableHeroCell.xib; sourceTree = "<group>"; };
 		C4A0BD07209387BB001D1AF4 /* STTableV2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableV2Cell.swift; sourceTree = "<group>"; };
 		C4A0BD08209387BB001D1AF4 /* STTableHeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableHeroCell.swift; sourceTree = "<group>"; };
@@ -97,6 +115,34 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		C464D11E211FD93200033106 /* JsonModels */ = {
+			isa = PBXGroup;
+			children = (
+				C49F61CB211F827300A94667 /* TCJsonEvent.swift */,
+				C49F61CD211F834100A94667 /* TCJsonImage.swift */,
+				C49F61CF211F83EF00A94667 /* TCJsonResult.swift */,
+				C464D1272120A4B000033106 /* TCJsonSchedule.swift */,
+			);
+			path = JsonModels;
+			sourceTree = "<group>";
+		};
+		C464D11F211FD95800033106 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C49F61C9211F817B00A94667 /* TCEventRemote.swift */,
+				C464D1292120A6B900033106 /* TCScheduleRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C464D122211FDBEE00033106 /* ChangeProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				C464D123211FDC1B00033106 /* TCEventProcessor.swift */,
+			);
+			path = ChangeProcessor;
+			sourceTree = "<group>";
+		};
 		C490F40E2026ABE600C370B2 /* Drawers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +183,6 @@
 		C490F41B2026B1E900C370B2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C4F5E3542022C4B800223DCC /* TCMS.xcdatamodeld */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -151,6 +196,18 @@
 				C4F5E3572022C4B800223DCC /* Assets.xcassets */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		C49F61C8211F815300A94667 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C464D11F211FD95800033106 /* Remote */,
+				C464D11E211FD93200033106 /* JsonModels */,
+				C464D122211FDBEE00033106 /* ChangeProcessor */,
+				C464D120211FDB5700033106 /* TCSyncCoordinator.swift */,
+				C4F5E3542022C4B800223DCC /* TCMS.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C4A0BD0E20938809001D1AF4 /* Parallax */ = {
@@ -206,10 +263,12 @@
 			children = (
 				C4F5E34D2022C4B800223DCC /* AppDelegate.swift */,
 				C4A0BD1720938962001D1AF4 /* Bridging-Header.h */,
+				C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */,
 				C4F5E35C2022C4B800223DCC /* Info.plist */,
 				C490F41A2026B1E400C370B2 /* Views */,
 				C490F4192026B1DB00C370B2 /* ViewControllers */,
 				C490F41B2026B1E900C370B2 /* ViewModels */,
+				C49F61C8211F815300A94667 /* Models */,
 				C410C1C220938F8900AD0033 /* Debug */,
 			);
 			path = TCMS;
@@ -235,7 +294,6 @@
 				C4F5E3472022C4B800223DCC /* Frameworks */,
 				C4F5E3482022C4B800223DCC /* Resources */,
 				54C6D9EB8137D17990DA174F /* [CP] Embed Pods Frameworks */,
-				875A8DD01EF563E8CFC5A94A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +363,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TCMS/Pods-TCMS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACKit/ACKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ACSyncKit/ACSyncKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
@@ -319,6 +378,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACSyncKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
@@ -353,21 +413,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		875A8DD01EF563E8CFC5A94A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCMS/Pods-TCMS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,19 +420,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */,
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
+				C49F61D0211F83EF00A94667 /* TCJsonResult.swift in Sources */,
+				C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */,
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
+				C464D1282120A4B000033106 /* TCJsonSchedule.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
+				C464D12A2120A6B900033106 /* TCScheduleRemote.swift in Sources */,
+				C464D124211FDC1B00033106 /* TCEventProcessor.swift in Sources */,
+				C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
+				C464D121211FDB5700033106 /* TCSyncCoordinator.swift in Sources */,
+				C464D126211FDDDF00033106 /* UIImageView+SDWebImage.swift in Sources */,
 				C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */,
 				C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */,
 				C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */,

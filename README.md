@@ -82,6 +82,7 @@ GET /events?start={timestamp}&end={timestamp}
             "id": "feed1",
             "title": "",
             "desc": "",
+            "createdAt": "2015-10-01T00:00:00Z",
             "images": [
             ],
             event: "someid1"
@@ -90,6 +91,7 @@ GET /events?start={timestamp}&end={timestamp}
             "id": "feed2",
             "title": "",
             "desc": "",
+            "createdAt": "",
             "images": [
             ],
             event: "someid2"
@@ -97,7 +99,15 @@ GET /events?start={timestamp}&end={timestamp}
     ],
     featured: [
         {
-            "id": "someid1",
+            {
+            	"id": "feed1",
+	            "title": "",
+    	        "desc": "",
+    	        "createdAt": "",
+        	    "images": [
+            	],
+	            event: "someid1"
+    	    },
             "misc": []
         }
     ]

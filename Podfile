@@ -28,7 +28,7 @@ target 'TCMS' do
         pod 'Locksmith'
         pod 'CocoaLumberjack'
         pod 'ACKit', :git => 'https://github.com/austinzmchen/ACKit.git'
-#        pod 'ACKit', :path => 'ACKit'
+        pod 'ACSyncKit', :path => 'ACSyncKit'
        
         # deployment
         pod 'Fabric'

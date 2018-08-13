@@ -1,0 +1,19 @@
+
+Course {
+	id: Int -> PK
+	title: String
+	desc: String
+	level: String
+	teacher: String
+	active: Bool
+	createdAt: timestamp
+}
+
+CourseSchedule {
+	id: Int -> PK
+	courseId: Int -> FK
+	startAt: timestamp
+	duration: Int
+	recurrentInterval: Int (in seconds, 0 for not recurrent)
+	notes: String
+}
