@@ -19,17 +19,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NN2-Vb-b8V" userLabel="parallaxView" customClass="KCParallaxView">
-                        <rect key="frame" x="10" y="20" width="300" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFTER THE AFTER, AFTER PARTY" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JV-va-2V2">
-                        <rect key="frame" x="25" y="87" width="192" height="40"/>
+                        <rect key="frame" x="15" y="87" width="204" height="40"/>
                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 SNACKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-WY-vEY">
-                        <rect key="frame" x="25" y="134" width="71" height="15.5"/>
+                        <rect key="frame" x="15" y="134" width="71" height="15.5"/>
                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
                         <color key="textColor" red="0.08235294118" green="0.58431372550000005" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -44,13 +44,13 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="NN2-Vb-b8V" secondAttribute="bottom" constant="19.5" id="9A8-YE-TsD"/>
+                    <constraint firstAttribute="bottom" secondItem="NN2-Vb-b8V" secondAttribute="bottom" id="9A8-YE-TsD"/>
                     <constraint firstAttribute="trailing" secondItem="fBE-59-RW4" secondAttribute="trailing" constant="10" id="Otc-sS-2at"/>
-                    <constraint firstAttribute="trailing" secondItem="NN2-Vb-b8V" secondAttribute="trailing" constant="10" id="RMk-31-2Y0"/>
+                    <constraint firstAttribute="trailing" secondItem="NN2-Vb-b8V" secondAttribute="trailing" id="RMk-31-2Y0"/>
                     <constraint firstAttribute="bottom" secondItem="cWA-WY-vEY" secondAttribute="bottom" constant="30" id="VI0-Fe-Ul9"/>
                     <constraint firstItem="fBE-59-RW4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="XUu-Bs-Pes"/>
-                    <constraint firstItem="NN2-Vb-b8V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Yse-Qr-L7m"/>
-                    <constraint firstItem="NN2-Vb-b8V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZPD-PV-FMF"/>
+                    <constraint firstItem="NN2-Vb-b8V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Yse-Qr-L7m"/>
+                    <constraint firstItem="NN2-Vb-b8V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZPD-PV-FMF"/>
                     <constraint firstItem="8JV-va-2V2" firstAttribute="leading" secondItem="cWA-WY-vEY" secondAttribute="leading" id="aXu-FJ-Bji"/>
                     <constraint firstAttribute="bottom" secondItem="fBE-59-RW4" secondAttribute="bottom" id="chC-Fs-FhV"/>
                     <constraint firstItem="8JV-va-2V2" firstAttribute="width" secondItem="NN2-Vb-b8V" secondAttribute="width" multiplier="0.6" constant="12" id="qyw-oR-3eR"/>

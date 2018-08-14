@@ -134,6 +134,8 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
         cell.imgView.sdSetImage(withString: event.images.first?.path)
         cell.titleLabel.text = event.title
+        
+        cell.topBorderView.isHidden = indexPath.row == 2 + 1
         return cell
     }
     
@@ -191,5 +193,5 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
 private let kHeight: CGFloat = 44
 private let kMinHeight: CGFloat = 20
 
-private let kHeight2: CGFloat = 270
-private let kMinHeight2: CGFloat = 20
+private let kHeight2: CGFloat = 280
+private let kMinHeight2: CGFloat = 30

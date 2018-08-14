@@ -27,6 +27,7 @@ class STTableV2Cell: UITableViewCell {
     @IBOutlet weak var imgGradientView: ACGradientView!
     @IBOutlet weak var uncensorLabel: UILabel!
     
+    @IBOutlet weak var topBorderView: UIView!
     @IBOutlet weak var bottomBorderView: UIView!
     
     override func awakeFromNib() {

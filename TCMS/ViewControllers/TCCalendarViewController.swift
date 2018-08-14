@@ -18,13 +18,15 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     var viewDelegate: TCDrawerMasterViewControllerDelegate?
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var titleButton: UIButton!
+    @IBAction func titleButtonTapped(_ sender: Any) {
+        calendarView.scrollToDate(Date.init())
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
-    let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
-    let monthColor = UIColor.white
+    let outsideMonthColor = UIColor.init(red: 77/255.0, green: 77/255.0, blue: 77/255.0, alpha: 1)
+    let monthColor = UIColor.black
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
     let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
     
@@ -59,12 +61,14 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         guard let validCell = view as? CustomCell  else { return }
         
         if cellState.isSelected {
-            validCell.dateLabel.textColor = selectedMonthColor
+            validCell.dateLabel.textColor = .white
         } else {
             if cellState.dateBelongsTo == .thisMonth {
                 validCell.dateLabel.textColor = monthColor
+                validCell.dateLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
             } else {
                 validCell.dateLabel.textColor = outsideMonthColor
+                validCell.dateLabel.font = UIFont.systemFont(ofSize: 13)
             }
         }
     }
@@ -82,10 +86,11 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         let date = visibleDates.monthDates.first!.date
         
         self.formatter.dateFormat = "yyyy"
-        self.year.text = self.formatter.string(from: date)
+        let year = self.formatter.string(from: date)
         
         self.formatter.dateFormat = "MMMM"
-        self.month.text = self.formatter.string(from: date)
+        let month = self.formatter.string(from: date)
+        titleButton.setTitle("\(month) \(year)", for: .normal)
         
         let fDate = visibleDates.monthDates.first!.date
         let df = DateFormatter(withFormat: "yyyy-MM-dd'T'HH:mm:ss", locale: "en_US_POSIX")

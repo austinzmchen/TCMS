@@ -19,6 +19,15 @@ class TCAboutUsViewController: UIViewController, TCDrawerItemViewControllerType 
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var containerView: UIView!
     
+    @IBAction func phoneTapped(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "sms:+16478893330")!, options: [:], completionHandler: nil)
+    }
+    @IBAction func emailTapped(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "mailto:toronto@artminddance.com")!, options: [:], completionHandler: nil)
+    }
+    @IBAction func addressTapped(_ sender: Any) {
+    }
+    
     var state: State = .collapsed
     var progressWhenInterrupted: CGFloat = 0
     
