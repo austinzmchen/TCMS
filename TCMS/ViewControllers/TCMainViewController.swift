@@ -136,7 +136,15 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = event.title
         
         cell.topBorderView.isHidden = indexPath.row == 2 + 1
+        cell.tag = indexPath.row
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0.0
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            cell.alpha = 1.0
+        }, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
