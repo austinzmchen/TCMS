@@ -148,6 +148,9 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
             cell.selectedView.backgroundColor = .orange
         }
         
+
+        cell.eventsCount = dateEventsDict[date.tcDate]?.count ?? 0
+        
         return cell
     }
     
