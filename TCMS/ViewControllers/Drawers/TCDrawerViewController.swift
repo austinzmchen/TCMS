@@ -97,9 +97,7 @@ extension TCDrawerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = type(of: self).drawerItems[indexPath.row]
         if item.title ~= "Help" {
-            UIApplication.shared.open(URL(string: "mailto:help@mytyria.com")!, options: [:]) { (finished) in
-                print("finished: \(finished)")
-            }
+            UIApplication.shared.open(URL(string: "mailto:toronto@artminddance.com")!, options: [:], completionHandler: nil)
             return
         }
         self.delegate?.didSelect(drawerItem: item, atIndex: indexPath.row)

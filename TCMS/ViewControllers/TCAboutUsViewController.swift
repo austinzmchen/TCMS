@@ -65,9 +65,20 @@ class TCAboutUsViewController: UIViewController, TCDrawerItemViewControllerType 
         
         blurView.effect = nil
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        sharedAppDelegate.lockOrientation(to: .portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sharedAppDelegate.unlockOrientation()
+    }
     
     var containerConstants: (minX: CGFloat, minY: CGFloat, maxY: CGFloat, height: CGFloat)
-        = (minX: 10, minY: 120, maxY: 450, height: 450)
+        = (minX: 10, minY: 120,
+           maxY: 450, height: 450) // maxY is relative to left bottom corner
     
     func layoutContainerView(state: State) {
         switch state {

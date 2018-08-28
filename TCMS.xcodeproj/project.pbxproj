@@ -31,6 +31,7 @@
 		C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A0BD09209387BC001D1AF4 /* STTableV2Cell.xib */; };
 		C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD1020938809001D1AF4 /* KCParallaxView.m */; };
 		C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0BD1220938809001D1AF4 /* UIImageView+Aldo.m */; };
+		C4ADDDE62134C96A00714179 /* AppDelegate+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADDDE52134C96A00714179 /* AppDelegate+Orientation.swift */; };
 		C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */; };
 		C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		C4A0BD1120938809001D1AF4 /* KCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCParallaxView.h; sourceTree = "<group>"; };
 		C4A0BD1220938809001D1AF4 /* UIImageView+Aldo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Aldo.m"; sourceTree = "<group>"; };
 		C4A0BD1720938962001D1AF4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C4ADDDE52134C96A00714179 /* AppDelegate+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Orientation.swift"; sourceTree = "<group>"; };
 		C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAboutUsViewController.swift; sourceTree = "<group>"; };
 		C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainTopCollectionCell.swift; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F5E34D2022C4B800223DCC /* AppDelegate.swift */,
+				C4ADDDE52134C96A00714179 /* AppDelegate+Orientation.swift */,
 				C4A0BD1720938962001D1AF4 /* Bridging-Header.h */,
 				C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */,
 				C4F5E35C2022C4B800223DCC /* Info.plist */,
@@ -439,6 +442,7 @@
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
+				C4ADDDE62134C96A00714179 /* AppDelegate+Orientation.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
 				C464D121211FDB5700033106 /* TCSyncCoordinator.swift in Sources */,
 				C464D126211FDDDF00033106 /* UIImageView+SDWebImage.swift in Sources */,

@@ -13,7 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    /* orientations
+     * shouldRotate() per view controller not called depends on how view controllers hierachy is structured
+     */
+    var lockedOrientation = UIInterfaceOrientationMask.all
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -91,3 +95,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let sharedAppDelegate = UIApplication.shared.delegate as! AppDelegate
