@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT8-ct-ZB1" userLabel="closeButton">
-                                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="5" y="2" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="W0p-pJ-BV4"/>
                                             <constraint firstAttribute="width" constant="40" id="ep6-ti-7cq"/>
@@ -45,7 +45,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6t-IQ-fEe" userLabel="settingsButton">
-                                        <rect key="frame" x="291" y="5" width="80" height="40"/>
+                                        <rect key="frame" x="291" y="2" width="80" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3AK-r2-QDD"/>
                                             <constraint firstAttribute="width" constant="80" id="pOf-bB-veu"/>
@@ -61,7 +61,7 @@
                                     <constraint firstItem="n6t-IQ-fEe" firstAttribute="centerY" secondItem="rT8-ct-ZB1" secondAttribute="centerY" id="75r-yc-cjO"/>
                                     <constraint firstAttribute="trailing" secondItem="n6t-IQ-fEe" secondAttribute="trailing" constant="4" id="Lr6-Mh-nuQ"/>
                                     <constraint firstAttribute="height" constant="44" id="RFh-hY-VfM"/>
-                                    <constraint firstItem="rT8-ct-ZB1" firstAttribute="top" secondItem="YiH-3K-kBi" secondAttribute="top" constant="5" id="fUu-3W-1Ux"/>
+                                    <constraint firstItem="rT8-ct-ZB1" firstAttribute="top" secondItem="YiH-3K-kBi" secondAttribute="top" constant="2" id="fUu-3W-1Ux"/>
                                     <constraint firstItem="rT8-ct-ZB1" firstAttribute="leading" secondItem="YiH-3K-kBi" secondAttribute="leading" constant="5" id="xpt-5o-41N"/>
                                 </constraints>
                             </view>

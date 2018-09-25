@@ -184,11 +184,7 @@ extension TCCalendarViewController: UITableViewDataSource, UITableViewDelegate {
         guard let sd = selectedDate else {return 0}
         return dateEventsDict[sd]?.count ?? 0
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kCalendarTableCell", for: indexPath)
         
