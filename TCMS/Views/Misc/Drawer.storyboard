@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gGd-Qr-ksV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gGd-Qr-ksV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -115,15 +115,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aXj-e8-Z2E" secondAttribute="trailing" id="0mn-hZ-Wgg"/>
+                            <constraint firstItem="46a-EJ-57g" firstAttribute="top" secondItem="JiK-6w-M34" secondAttribute="top" id="1rt-ib-eTP"/>
                             <constraint firstItem="aXj-e8-Z2E" firstAttribute="top" secondItem="YiH-3K-kBi" secondAttribute="bottom" id="Fw3-73-JkF"/>
                             <constraint firstItem="aXj-e8-Z2E" firstAttribute="leading" secondItem="JiK-6w-M34" secondAttribute="leading" id="H3v-Hl-i6I"/>
                             <constraint firstItem="gPF-Cn-bSS" firstAttribute="top" secondItem="aXj-e8-Z2E" secondAttribute="bottom" id="Hn3-66-Jgx"/>
                             <constraint firstItem="46a-EJ-57g" firstAttribute="leading" secondItem="JiK-6w-M34" secondAttribute="leading" id="IUy-mo-KvQ"/>
                             <constraint firstItem="YiH-3K-kBi" firstAttribute="top" secondItem="JgD-fp-zuf" secondAttribute="bottom" id="M1L-ka-PVx"/>
-                            <constraint firstItem="gPF-Cn-bSS" firstAttribute="top" secondItem="46a-EJ-57g" secondAttribute="bottom" id="e4Z-Kg-Klw"/>
+                            <constraint firstAttribute="bottom" secondItem="46a-EJ-57g" secondAttribute="bottom" id="RNr-pP-l0a"/>
                             <constraint firstAttribute="trailing" secondItem="46a-EJ-57g" secondAttribute="trailing" id="fiy-vo-pYG"/>
                             <constraint firstAttribute="trailing" secondItem="YiH-3K-kBi" secondAttribute="trailing" id="gYw-cX-qPk"/>
-                            <constraint firstItem="46a-EJ-57g" firstAttribute="top" secondItem="JgD-fp-zuf" secondAttribute="bottom" constant="-20" id="v8a-dT-dso"/>
                             <constraint firstItem="YiH-3K-kBi" firstAttribute="leading" secondItem="JiK-6w-M34" secondAttribute="leading" id="vI3-Ex-1RH"/>
                         </constraints>
                     </view>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8l-ZI-LoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="-18"/>
+            <point key="canvasLocation" x="837.60000000000002" y="-18.440779610194905"/>
         </scene>
         <!--Drawer Master View Controller-->
         <scene sceneID="w4l-Xe-XLR">
