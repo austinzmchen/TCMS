@@ -22,6 +22,10 @@ class TCStoryboardFactory: NSObject {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
+    static var ptStuffStoryboard: UIStoryboard {
+        return UIStoryboard(name: "PTStuff", bundle: nil)
+    }
+    
     static var debugStoryboard: UIStoryboard {
         return UIStoryboard(name: "Debug", bundle: nil)
     }

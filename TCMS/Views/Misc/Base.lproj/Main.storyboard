@@ -50,6 +50,23 @@
                                                 <constraint firstItem="hvx-eO-wN3" firstAttribute="leading" secondItem="5Wk-bE-d6i" secondAttribute="leading" constant="20" id="eXf-Jy-0eK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TNE-g5-Z6h" kind="show" id="bp9-gd-yWe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParallaxCell" rowHeight="240" id="7d7-VL-FdU" customClass="ParallaxCell" customModule="TCMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="414" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7d7-VL-FdU" id="9Aa-FT-1oS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="separatorColor">
+                                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -197,6 +214,7 @@
                                     </constraints>
                                     <connections>
                                         <outlet property="imgView" destination="AUA-5E-9vq" id="UEI-Oz-sfh"/>
+                                        <segue destination="TNE-g5-Z6h" kind="show" id="ksA-Yu-cyb"/>
                                     </connections>
                                 </collectionViewCell>
                             </cells>
@@ -234,6 +252,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="WAL-Im-8qe" firstAttribute="trailing" secondItem="BkK-qA-Ue1" secondAttribute="trailing" id="08K-6S-VdV"/>
                         <constraint firstItem="BkK-qA-Ue1" firstAttribute="top" secondItem="WAL-Im-8qe" secondAttribute="top" id="4Ih-af-P9I"/>
@@ -247,6 +266,14 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="1372.4637681159422" y="17.410714285714285"/>
+        </scene>
+        <!--DemoDetailViewController-->
+        <scene sceneID="HCg-sl-gGc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PTStuff" referencedIdentifier="DemoDetailViewController" id="TNE-g5-Z6h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHE-bs-ogc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373" y="434"/>
         </scene>
         <!--Calendar VC-->
         <scene sceneID="SIB-nz-hye">
@@ -865,4 +892,7 @@
         <image name="icPhone" width="38" height="40"/>
         <image name="smile" width="1200" height="1200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ksA-Yu-cyb"/>
+    </inferredMetricsTieBreakers>
 </document>
