@@ -36,6 +36,9 @@
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
 		C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF66215C752D00B7A826 /* PTStuff.storyboard */; };
+		C49DCF69215DD43200B7A826 /* DetailViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* DetailViewController2.swift */; };
+		C49DCF70215DD6C800B7A826 /* STSeriesElasticHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */; };
+		C49DCF71215DD6C800B7A826 /* STSeriesElasticHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */; };
 		C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61C9211F817B00A94667 /* TCEventRemote.swift */; };
 		C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CB211F827300A94667 /* TCJsonEvent.swift */; };
 		C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CD211F834100A94667 /* TCJsonImage.swift */; };
@@ -92,6 +95,9 @@
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C49DCF66215C752D00B7A826 /* PTStuff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PTStuff.storyboard; sourceTree = "<group>"; };
+		C49DCF68215DD43200B7A826 /* DetailViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController2.swift; sourceTree = "<group>"; };
+		C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSeriesElasticHeaderView.swift; sourceTree = "<group>"; };
+		C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STSeriesElasticHeaderView.xib; sourceTree = "<group>"; };
 		C49F61C9211F817B00A94667 /* TCEventRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEventRemote.swift; sourceTree = "<group>"; };
 		C49F61CB211F827300A94667 /* TCJsonEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonEvent.swift; sourceTree = "<group>"; };
 		C49F61CD211F834100A94667 /* TCJsonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonImage.swift; sourceTree = "<group>"; };
@@ -181,8 +187,8 @@
 				C483494E215C1F7A004A6F0F /* PTNavView.swift */,
 				C4834950215C1F8A004A6F0F /* PTNavView.xib */,
 				C48348B7215BD01B004A6F0F /* Extensions.swift */,
-				C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */,
 				C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */,
+				C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */,
 				C4834942215BD13B004A6F0F /* AnimationHelpers */,
 				C4834944215BD13B004A6F0F /* ScreenShort */,
 				C48348EA215BD089004A6F0F /* Constants */,
@@ -287,6 +293,7 @@
 				C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */,
 				C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */,
 				C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */,
+				C49DCF68215DD43200B7A826 /* DetailViewController2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +301,8 @@
 		C490F41A2026B1E400C370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */,
+				C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */,
 				C4A0BD0E20938809001D1AF4 /* Parallax */,
 				C4E0E3EB2090219C0031BBB8 /* CollectionView */,
 				C4E0E3EA2090218E0031BBB8 /* TableView */,
@@ -472,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */,
+				C49DCF71215DD6C800B7A826 /* STSeriesElasticHeaderView.xib in Resources */,
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
 				C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */,
@@ -491,7 +501,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TCMS/Pods-TCMS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TCMS/Pods-TCMS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACKit/ACKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ACSyncKit/ACSyncKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -522,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCMS/Pods-TCMS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TCMS/Pods-TCMS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		606155D4FB6E192CC70F88FC /* [CP] Check Pods Manifest.lock */ = {
@@ -564,10 +574,12 @@
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */,
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
+				C49DCF70215DD6C800B7A826 /* STSeriesElasticHeaderView.swift in Sources */,
 				C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */,
 				C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */,
+				C49DCF69215DD43200B7A826 /* DetailViewController2.swift in Sources */,
 				C48348B8215BD01B004A6F0F /* Extensions.swift in Sources */,
 				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
 				C464D1282120A4B000033106 /* TCJsonSchedule.swift in Sources */,

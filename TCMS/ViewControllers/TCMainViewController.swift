@@ -8,16 +8,9 @@
 
 import UIKit
 import ACKit
+import SDWebImage
 
 class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
-    
-    var currentCell: ParallaxCell?
-    var duration: Double = 0.8
-    var currentTextLabel: MovingLabel?
-    
-    
-    
-    
     
     @IBOutlet weak var leftBarButton: UIButton!
     @IBAction func leftBarButtonTapped(_ sender: Any) {
@@ -37,7 +30,11 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
     
     var viewDelegate: TCDrawerMasterViewControllerDelegate?
     
-//    var observerTokenBag = ACNoteObserverTokenBag()
+    // pt stuff
+    var currentCell: ParallaxCell?
+    var duration: Double = 0.8
+    var currentTextLabel: MovingLabel?
+    
     private lazy var collectionDataDelegate: TCMainCollectionDataDelegate? = {
         return TCMainCollectionDataDelegate(fromViewController: self)
     }()
@@ -90,14 +87,6 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
                 }
             }
         }
-        
-//        tableView.separatorStyle = .none
-//        
-//        if #available(iOS 11.0, *) {
-//            tableView.contentInsetAdjustmentBehavior = .never
-//        } else {
-//            tableView.contentInset = UIEdgeInsets.init(top: -64, left: 0, bottom: 0, right: 0)
-//        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -112,17 +101,7 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         headerView2.frame = f
     }
     
-//    open override func viewDidLoad() {
-//        super.viewDidLoad()
-//        tableView.separatorStyle = .none
-//
-//        if #available(iOS 11.0, *) {
-//            tableView.contentInsetAdjustmentBehavior = .never
-//        } else {
-//            tableView.contentInset = UIEdgeInsets.init(top: -64, left: 0, bottom: 0, right: 0)
-//        }
-//    }
-    
+    // pt stuff
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -143,73 +122,55 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     private var rowInfos: [TableCellRowInfo] {
         return [
-//            TableCellRowInfo(height: 250, cell: cell1),
+            // TableCellRowInfo(height: 250, cell: cell1),
             TableCellRowInfo(height: 37.0, cell: pageControlCell),
-//            TableCellRowInfo(height: 0.0, cell: cell2)
+            // TableCellRowInfo(height: 0.0, cell: cell2)
         ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return events.count
-        return 100
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 2 {
-//            return 180
-//        }
-//        return 107
-        
-        return 240
+        let event = events[indexPath.row]
+        if event.isFeatured {
+            // return 180
+            return 240
+        }
+        return 107
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 2 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableHeroCell", for: indexPath) as! STTableHeroCell
-//            cell.parallaxView.backgroundImageView.image = UIImage.init(named: "parallaxImage")
-//            cell.parallaxView.backgroundImageView.contentMode = .scaleAspectFill
-//            cell.parallaxView.parallaxScrollFactor = 0.13
-//            return cell
-//        }
-//        let event = events[indexPath.row]
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
-//        cell.imgView.sdSetImage(withString: event.images.first?.path)
-//        cell.titleLabel.text = event.title
-//
-//        cell.topBorderView.isHidden = indexPath.row == 2 + 1
-//        cell.tag = indexPath.row
-//        return cell
-        
-        let cell: ParallaxCell = tableView.getReusableCellWithIdentifier(indexPath: indexPath)
+        let event = events[indexPath.row]
+        if event.isFeatured {
+            let cell: ParallaxCell = tableView.getReusableCellWithIdentifier(indexPath: indexPath)
+            if let p = event.images.first?.path {
+                SDWebImageManager.shared().loadImage(with: URL.init(string: p), options: [], progress: nil) { (image, _, _, _, _, _) in
+                    guard let image = image else {return}
+                    cell.setImage(image, title: event.title ?? "")
+                }
+            }
+            return cell
+        }
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
+        cell.imgView.sdSetImage(withString: event.images.first?.path)
+        cell.titleLabel.text = event.title
+
+        cell.topBorderView.isHidden = indexPath.row == 2 + 1
+        cell.tag = indexPath.row
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.alpha = 0.0
-//        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-//            cell.alpha = 1.0
-//        }, completion: nil)
-        
-        guard let cell = cell as? ParallaxCell else { return }
-        
-        let index = indexPath.row % items.count
-        let imageName = items[index].0
-        let title = items[index].1
-        
-        if let image = UIImage(named: imageName) {
-            cell.setImage(image, title: title)
-        }
-    }
-    
-    public func tableView(_: UITableView, didSelectRowAt _: IndexPath) {
-        let detaleViewController = TCStoryboardFactory.ptStuffStoryboard
-            .instantiateInitialViewController() as! DemoDetailViewController
-        pushViewController(detaleViewController)
+        cell.alpha = 0.0
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            cell.alpha = 1.0
+        }, completion: nil)
     }
     
     public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        
         guard let currentCell = tableView.cellForRow(at: indexPath) as? ParallaxCell else {
             return indexPath
         }
@@ -217,12 +178,17 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         self.currentCell = currentCell
         return indexPath
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        if event.isFeatured {
+            let detaleViewController = TCStoryboardFactory.ptStuffStoryboard
+                .instantiateInitialViewController() as! DemoDetailViewController
+            pushViewController(detaleViewController)
+        } else {
+            performSegue(withIdentifier: "kNormalCellPush", sender: nil)
+        }
+    }
     
-    
-    
-    
-    
-
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // print(scrollView.contentOffset.y)
 
@@ -313,12 +279,6 @@ extension TCMainViewController {
     }
 }
 
-
-
-
-
-
-
 extension TCMainViewController {
     
     fileprivate func createTitleLable(_ cell: ParallaxCell) -> MovingLabel {
@@ -351,21 +311,6 @@ extension TCMainViewController {
         return separator
     }
 }
-
-// MARK: tableView dataSource
-
-//extension TCMainViewController {
-//
-//    public final override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//
-//        guard let currentCell = tableView.cellForRow(at: indexPath) as? ParallaxCell else {
-//            return indexPath
-//        }
-//
-//        self.currentCell = currentCell
-//        return indexPath
-//    }
-//}
 
 // MARK: helpers
 

@@ -1,5 +1,5 @@
 PODS:
-  - ACKit (1.0.2)
+  - ACKit (1.0.13)
   - ACSyncKit (0.1.0):
     - Alamofire
     - AlamofireObjectMapper
@@ -66,11 +66,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ACKit:
-    :commit: 6d1ec7ecc0d71633342d6d2e22616912b21d3d15
+    :commit: 531e84fa7e2292801b3e7e8bdcdd2b11e46b04ed
     :git: https://github.com/austinzmchen/ACKit.git
 
 SPEC CHECKSUMS:
-  ACKit: 859f5e8a3688bdc3e0b1ecff9da5e762ee0619a6
+  ACKit: 21ca30fc21008582c2ad8b0818479271339d1972
   ACSyncKit: df52af7ea5001c1e7b41eafe260e0ba8c5f03565
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
@@ -87,4 +87,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9dcb3689382c66d79f4dee188fedb7b8f25891e2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

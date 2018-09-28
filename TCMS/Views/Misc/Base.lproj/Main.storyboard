@@ -50,9 +50,6 @@
                                                 <constraint firstItem="hvx-eO-wN3" firstAttribute="leading" secondItem="5Wk-bE-d6i" secondAttribute="leading" constant="20" id="eXf-Jy-0eK"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="TNE-g5-Z6h" kind="show" id="bp9-gd-yWe"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParallaxCell" rowHeight="240" id="7d7-VL-FdU" customClass="ParallaxCell" customModule="TCMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="414" height="240"/>
@@ -86,6 +83,7 @@
                         <outlet property="leftBarButton" destination="kvT-gq-kmi" id="msl-Zg-BNa"/>
                         <outlet property="pageControl" destination="WXS-tC-ILn" id="oEF-Ol-Qvg"/>
                         <outlet property="tableView" destination="R8P-F0-rNl" id="fwi-av-B47"/>
+                        <segue destination="TNE-g5-Z6h" kind="show" identifier="kNormalCellPush" id="mcp-H3-NQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AqT-WI-YM5" sceneMemberID="firstResponder"/>
@@ -214,7 +212,7 @@
                                     </constraints>
                                     <connections>
                                         <outlet property="imgView" destination="AUA-5E-9vq" id="UEI-Oz-sfh"/>
-                                        <segue destination="TNE-g5-Z6h" kind="show" id="ksA-Yu-cyb"/>
+                                        <segue destination="rY6-0P-clk" kind="show" id="ard-no-ggI"/>
                                     </connections>
                                 </collectionViewCell>
                             </cells>
@@ -274,6 +272,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHE-bs-ogc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1373" y="434"/>
+        </scene>
+        <!--DetailViewController2-->
+        <scene sceneID="bQE-bv-LSb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PTStuff" referencedIdentifier="DetailViewController2" id="rY6-0P-clk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXk-ef-BQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="433"/>
         </scene>
         <!--Calendar VC-->
         <scene sceneID="SIB-nz-hye">
@@ -892,7 +898,4 @@
         <image name="icPhone" width="38" height="40"/>
         <image name="smile" width="1200" height="1200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ksA-Yu-cyb"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -36,8 +36,9 @@ public class DemoDetailViewController: PTDetailViewController {
     @IBOutlet var shareImageView: UIImageView!
     @IBOutlet var hertIconView: UIImageView!
     
+    @IBOutlet weak var textView: UITextView!
     
-
+    
     var backButton: UIButton?
 
     var bottomSafeArea: CGFloat {

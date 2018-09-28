@@ -15,6 +15,7 @@ open class TCJsonEvent: ACSyncableJsonRecord {
     var title: String?
     var desc: String?
     var notes: String?
+    var isFeatured = false
     var images: [TCJsonImage] = []
     
     override open func mapping(map: Map) {
@@ -23,6 +24,7 @@ open class TCJsonEvent: ACSyncableJsonRecord {
         title <- map["title"]
         desc <- map["desc"]
         notes <- map["notes"]
+        isFeatured <- map["isFeatured"]
         images <- map["images"]
     }
 }
