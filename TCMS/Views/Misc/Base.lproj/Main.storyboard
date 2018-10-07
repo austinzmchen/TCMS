@@ -678,6 +678,7 @@
                         <outlet property="blurView" destination="8vK-2j-DUJ" id="wZl-X0-gj6"/>
                         <outlet property="containerView" destination="hDQ-M8-s7z" id="qoL-Nh-ul3"/>
                         <outlet property="mapView" destination="3Pp-NT-Dcx" id="KF5-l7-UAP"/>
+                        <outlet property="textView" destination="h50-SP-Vxw" id="APR-k3-98U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlf-Hz-7lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -795,10 +796,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-v0-JVD" customClass="ACGradientView" customModule="ACKit">
-                            <rect key="frame" x="0.0" y="174" width="344" height="204"/>
+                            <rect key="frame" x="0.0" y="174" width="344" height="236"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h50-SP-Vxw">
-                                    <rect key="frame" x="42" y="0.0" width="260" height="204"/>
+                                    <rect key="frame" x="42" y="0.0" width="260" height="236"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="260" id="9KK-ix-RBu"/>
                                     </constraints>
@@ -830,10 +831,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4yT-qc-ORh">
-                            <rect key="frame" x="20" y="388" width="304" height="18"/>
+                            <rect key="frame" x="20" y="420" width="304" height="20"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-OF-Q3n" userLabel="authorLabel">
-                                    <rect key="frame" x="0.0" y="0.0" width="240.66666666666666" height="18"/>
+                                    <rect key="frame" x="0.0" y="1" width="240.66666666666666" height="18"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Developer:">
                                             <attributes>
@@ -858,12 +859,15 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-gj-2fw">
-                                    <rect key="frame" x="240.66666666666671" y="2.0000000000000009" width="63.333333333333343" height="14.333333333333336"/>
+                                    <rect key="frame" x="240.66666666666671" y="3.0000000000000009" width="63.333333333333343" height="14.333333333333336"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.3411764706" green="0.2784313725" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="ovV-rg-s9a"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -875,7 +879,7 @@
                         <constraint firstItem="quN-OG-WmQ" firstAttribute="trailing" secondItem="4yT-qc-ORh" secondAttribute="trailing" constant="20" id="Pwi-5Y-B7t"/>
                         <constraint firstItem="4M6-u1-QKL" firstAttribute="leading" secondItem="quN-OG-WmQ" secondAttribute="leading" id="ZhZ-Ov-lqk"/>
                         <constraint firstItem="4yT-qc-ORh" firstAttribute="leading" secondItem="quN-OG-WmQ" secondAttribute="leading" constant="20" id="hHG-sY-2sf"/>
-                        <constraint firstItem="quN-OG-WmQ" firstAttribute="bottom" secondItem="4yT-qc-ORh" secondAttribute="bottom" constant="10" id="jdH-PR-HRb"/>
+                        <constraint firstAttribute="bottom" secondItem="4yT-qc-ORh" secondAttribute="bottom" constant="10" id="jdH-PR-HRb"/>
                         <constraint firstItem="quN-OG-WmQ" firstAttribute="leading" secondItem="tlu-v0-JVD" secondAttribute="leading" id="lr0-e3-pyN"/>
                         <constraint firstItem="tlu-v0-JVD" firstAttribute="top" secondItem="4M6-u1-QKL" secondAttribute="bottom" constant="20" id="zin-cO-a0i"/>
                     </constraints>

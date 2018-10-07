@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C410C1C9209412C700AD0033 /* InteractiveAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */; };
 		C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */; };
+		C41C631F216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C631E216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift */; };
 		C464D121211FDB5700033106 /* TCSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D120211FDB5700033106 /* TCSyncCoordinator.swift */; };
 		C464D124211FDC1B00033106 /* TCEventProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D123211FDC1B00033106 /* TCEventProcessor.swift */; };
 		C464D126211FDDDF00033106 /* UIImageView+SDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */; };
@@ -36,9 +37,8 @@
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
 		C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF66215C752D00B7A826 /* PTStuff.storyboard */; };
-		C49DCF69215DD43200B7A826 /* DetailViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* DetailViewController2.swift */; };
-		C49DCF70215DD6C800B7A826 /* STSeriesElasticHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */; };
-		C49DCF71215DD6C800B7A826 /* STSeriesElasticHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */; };
+		C49DCF69215DD43200B7A826 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */; };
+		C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* ElasticView.swift */; };
 		C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61C9211F817B00A94667 /* TCEventRemote.swift */; };
 		C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CB211F827300A94667 /* TCJsonEvent.swift */; };
 		C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F61CD211F834100A94667 /* TCJsonImage.swift */; };
@@ -52,6 +52,7 @@
 		C4ADDDE62134C96A00714179 /* AppDelegate+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADDDE52134C96A00714179 /* AppDelegate+Orientation.swift */; };
 		C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */; };
 		C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */; };
+		C4EB8DC52169963D00CD59D0 /* ElasticView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EB8DC42169963D00CD59D0 /* ElasticView.xib */; };
 		C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34D2022C4B800223DCC /* AppDelegate.swift */; };
 		C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */; };
 		C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E3512022C4B800223DCC /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		B9044F10C2C18D550E7C531B /* Pods_TCMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveAnimatorDelegate.swift; sourceTree = "<group>"; };
 		C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InteractiveAnimatorDelegate+Factory.swift"; sourceTree = "<group>"; };
+		C41C631E216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TCDetailViewController+Orientation.swift"; sourceTree = "<group>"; };
 		C464D120211FDB5700033106 /* TCSyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSyncCoordinator.swift; sourceTree = "<group>"; };
 		C464D123211FDC1B00033106 /* TCEventProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEventProcessor.swift; sourceTree = "<group>"; };
 		C464D125211FDDDF00033106 /* UIImageView+SDWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SDWebImage.swift"; sourceTree = "<group>"; };
@@ -95,9 +97,8 @@
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C49DCF66215C752D00B7A826 /* PTStuff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PTStuff.storyboard; sourceTree = "<group>"; };
-		C49DCF68215DD43200B7A826 /* DetailViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController2.swift; sourceTree = "<group>"; };
-		C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSeriesElasticHeaderView.swift; sourceTree = "<group>"; };
-		C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STSeriesElasticHeaderView.xib; sourceTree = "<group>"; };
+		C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
+		C49DCF6E215DD6C800B7A826 /* ElasticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticView.swift; sourceTree = "<group>"; };
 		C49F61C9211F817B00A94667 /* TCEventRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEventRemote.swift; sourceTree = "<group>"; };
 		C49F61CB211F827300A94667 /* TCJsonEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonEvent.swift; sourceTree = "<group>"; };
 		C49F61CD211F834100A94667 /* TCJsonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCJsonImage.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		C4ADDDE52134C96A00714179 /* AppDelegate+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Orientation.swift"; sourceTree = "<group>"; };
 		C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAboutUsViewController.swift; sourceTree = "<group>"; };
 		C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainTopCollectionCell.swift; sourceTree = "<group>"; };
+		C4EB8DC42169963D00CD59D0 /* ElasticView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ElasticView.xib; sourceTree = "<group>"; };
 		C4F5E34A2022C4B800223DCC /* TCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F5E34D2022C4B800223DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMainViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,8 @@
 		C48348A0215BCD33004A6F0F /* PreviewTransition */ = {
 			isa = PBXGroup;
 			children = (
+				C49DCF6E215DD6C800B7A826 /* ElasticView.swift */,
+				C4EB8DC42169963D00CD59D0 /* ElasticView.xib */,
 				C483494E215C1F7A004A6F0F /* PTNavView.swift */,
 				C4834950215C1F8A004A6F0F /* PTNavView.xib */,
 				C48348B7215BD01B004A6F0F /* Extensions.swift */,
@@ -293,7 +297,8 @@
 				C4E0E3E62087906D0031BBB8 /* TCAboutUsViewController.swift */,
 				C410C1C7209412C700AD0033 /* InteractiveAnimatorDelegate.swift */,
 				C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */,
-				C49DCF68215DD43200B7A826 /* DetailViewController2.swift */,
+				C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */,
+				C41C631E216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -301,8 +306,6 @@
 		C490F41A2026B1E400C370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C49DCF6E215DD6C800B7A826 /* STSeriesElasticHeaderView.swift */,
-				C49DCF6F215DD6C800B7A826 /* STSeriesElasticHeaderView.xib */,
 				C4A0BD0E20938809001D1AF4 /* Parallax */,
 				C4E0E3EB2090219C0031BBB8 /* CollectionView */,
 				C4E0E3EA2090218E0031BBB8 /* TableView */,
@@ -481,13 +484,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */,
-				C49DCF71215DD6C800B7A826 /* STSeriesElasticHeaderView.xib in Resources */,
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
 				C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */,
 				C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */,
 				C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */,
 				C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */,
+				C4EB8DC52169963D00CD59D0 /* ElasticView.xib in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,13 +577,14 @@
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */,
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
-				C49DCF70215DD6C800B7A826 /* STSeriesElasticHeaderView.swift in Sources */,
+				C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */,
 				C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */,
 				C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */,
-				C49DCF69215DD43200B7A826 /* DetailViewController2.swift in Sources */,
+				C49DCF69215DD43200B7A826 /* TCDetailViewController.swift in Sources */,
 				C48348B8215BD01B004A6F0F /* Extensions.swift in Sources */,
+				C41C631F216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift in Sources */,
 				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
 				C464D1282120A4B000033106 /* TCJsonSchedule.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,

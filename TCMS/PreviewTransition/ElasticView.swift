@@ -1,5 +1,5 @@
 //
-//  STSeriesElasticHeaderView.swift
+//  ElasticView.swift
 //  ACKit
 //
 //  Created by Austin Chen on 2017-09-05.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ACKit
 
 enum ACElasticViewStyle {
     case none
@@ -21,11 +20,11 @@ enum ACElasticViewExpandStyle {
     case bottomShift
 }
 
-class STSeriesElasticHeaderView: UIView {
+class ElasticView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var eView: UIView!
-    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var eImageView: UIImageView!
     
     @IBOutlet weak var eViewTopConstraint: NSLayoutConstraint!
     
@@ -37,11 +36,14 @@ class STSeriesElasticHeaderView: UIView {
     @IBOutlet weak var eViewCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var eViewEqualHeightToContentViewConstraint: NSLayoutConstraint!
     
-    var maxExpandableHeight: CGFloat {
-        return 376
+    var maxExpandableHeight: CGFloat = kDefaultMaxExpandableHeight {
+        didSet {
+            eView.constraints.front{$0.firstAttribute == .height}?.constant = maxExpandableHeight
+            self.setNeedsUpdateConstraints()
+        }
     }
     
-    var minExpandableHeight: CGFloat = 211
+    var minExpandableHeight: CGFloat = 0
     
     // MARK: life cycles
     override init(frame: CGRect) {
@@ -60,7 +62,7 @@ class STSeriesElasticHeaderView: UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let contentView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        self.insertSubview(contentView, at: 0)
+        insertSubview(contentView, at: 0)
         
         // add the missing contrainst between xib contentView to self
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,14 +72,15 @@ class STSeriesElasticHeaderView: UIView {
         contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
         self.clipsToBounds = true // in scale expand style, elastic view does not go out of bound of the container view
-        eView.constraints.filter{ $0.firstAttribute == .height }.first?.constant = 211
+        maxExpandableHeight = kDefaultMaxExpandableHeight
         
         elasticStyle = .centerFixed // default to centerFixed
-        expandStyle = .none
+        expandStyle = .bottomShift
     }
     
     // MARK: elastic settings
-    var elasticStyle: ACElasticViewStyle = .topFixed
+    
+    var elasticStyle: ACElasticViewStyle = .centerFixed
     
     var elasticZoomConstant: CGFloat = 0 {
         didSet {
@@ -143,26 +146,16 @@ class STSeriesElasticHeaderView: UIView {
         }
     }
     
-    func expandIfNeeded(whenScroll scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        if offsetY > 0 {
-            guard offsetY < scrollView.contentSize.height - scrollView.bounds.height
-                else { return }
-            
-            let h = maxExpandableHeight - min(maxExpandableHeight - minExpandableHeight, offsetY)
-            cHeight = h
-        } else {
-            cHeight = maxExpandableHeight
-        }
-    }
-    
-    func stretchIfNeeded(whenScroll scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 0 {
-            let y = abs(scrollView.contentOffset.y)
-            
-            elasticZoomConstant = y
+    var cOffsetY: CGFloat = 0 {
+        didSet {
+            if cOffsetY > 0 {
+                cHeight = maxExpandableHeight - min(maxExpandableHeight - minExpandableHeight, cOffsetY)
+            } else {
+                cHeight = maxExpandableHeight
+            }
         }
     }
 }
 
 fileprivate var kDefaultMaxExpandableHeight: CGFloat = 300
+

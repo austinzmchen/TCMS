@@ -18,6 +18,7 @@ class TCAboutUsViewController: UIViewController, TCDrawerItemViewControllerType 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var textView: UITextView!
     
     @IBAction func phoneTapped(_ sender: Any) {
         UIApplication.shared.open(URL(string: "sms:+16478893330")!, options: [:], completionHandler: nil)
