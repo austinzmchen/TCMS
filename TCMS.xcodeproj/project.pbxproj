@@ -29,6 +29,14 @@
 		C4834947215BD13B004A6F0F /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834945215BD13B004A6F0F /* ScreenShot.swift */; };
 		C483494F215C1F7A004A6F0F /* PTNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483494E215C1F7A004A6F0F /* PTNavView.swift */; };
 		C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4834950215C1F8A004A6F0F /* PTNavView.xib */; };
+		C48666582170263D00173FAE /* MBCollapsibleTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */; };
+		C48666592170263D00173FAE /* MBCollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */; };
+		C486665A2170263D00173FAE /* MBMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666522170263D00173FAE /* MBMenuTableCell.swift */; };
+		C486665B2170263D00173FAE /* MBCollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */; };
+		C486665C2170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */; };
+		C486665D2170263D00173FAE /* MBCollapsibleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666552170263D00173FAE /* MBCollapsibleTableView.swift */; };
+		C486665E2170263D00173FAE /* MBCollapsibleTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */; };
+		C486665F2170263D00173FAE /* MBMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666572170263D00173FAE /* MBMenuTableCell.xib */; };
 		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
 		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
@@ -89,6 +97,14 @@
 		C4834945215BD13B004A6F0F /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
 		C483494E215C1F7A004A6F0F /* PTNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNavView.swift; sourceTree = "<group>"; };
 		C4834950215C1F8A004A6F0F /* PTNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTNavView.xib; sourceTree = "<group>"; };
+		C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewFooter.xib; sourceTree = "<group>"; };
+		C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
+		C48666522170263D00173FAE /* MBMenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBMenuTableCell.swift; sourceTree = "<group>"; };
+		C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewDataDelegate.swift; sourceTree = "<group>"; };
+		C48666552170263D00173FAE /* MBCollapsibleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableView.swift; sourceTree = "<group>"; };
+		C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewFooter.swift; sourceTree = "<group>"; };
+		C48666572170263D00173FAE /* MBMenuTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBMenuTableCell.xib; sourceTree = "<group>"; };
 		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
 		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +294,21 @@
 			path = ScreenShort;
 			sourceTree = "<group>";
 		};
+		C486664F2170263D00173FAE /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C48666522170263D00173FAE /* MBMenuTableCell.swift */,
+				C48666572170263D00173FAE /* MBMenuTableCell.xib */,
+				C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */,
+				C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */,
+				C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */,
+				C48666552170263D00173FAE /* MBCollapsibleTableView.swift */,
+				C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */,
+				C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		C490F40E2026ABE600C370B2 /* Drawers */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +321,7 @@
 		C490F4192026B1DB00C370B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C486664F2170263D00173FAE /* Calendar */,
 				C490F40E2026ABE600C370B2 /* Drawers */,
 				C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */,
 				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
@@ -483,6 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C486665F2170263D00173FAE /* MBMenuTableCell.xib in Resources */,
 				C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */,
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
@@ -490,7 +523,9 @@
 				C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */,
 				C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */,
 				C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */,
+				C48666592170263D00173FAE /* MBCollapsibleTableViewHeader.xib in Resources */,
 				C4EB8DC52169963D00CD59D0 /* ElasticView.xib in Resources */,
+				C48666582170263D00173FAE /* MBCollapsibleTableViewFooter.xib in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +545,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
@@ -525,6 +561,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
@@ -571,8 +608,11 @@
 				C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */,
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
+				C486665A2170263D00173FAE /* MBMenuTableCell.swift in Sources */,
 				C49F61D0211F83EF00A94667 /* TCJsonResult.swift in Sources */,
+				C486665B2170263D00173FAE /* MBCollapsibleTableViewHeader.swift in Sources */,
 				C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */,
+				C486665C2170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift in Sources */,
 				C48348B2215BCD33004A6F0F /* ParallaxCell.swift in Sources */,
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */,
@@ -595,8 +635,10 @@
 				C48348B5215BCF33004A6F0F /* DemoTableViewController.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
+				C486665D2170263D00173FAE /* MBCollapsibleTableView.swift in Sources */,
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
+				C486665E2170263D00173FAE /* MBCollapsibleTableViewFooter.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
 				C4ADDDE62134C96A00714179 /* AppDelegate+Orientation.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,

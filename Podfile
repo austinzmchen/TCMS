@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'TCMS' do
  	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -29,7 +29,11 @@ target 'TCMS' do
         pod 'CocoaLumberjack'
         pod 'ACKit', :git => 'https://github.com/austinzmchen/ACKit.git'
         pod 'ACSyncKit', :path => 'ACSyncKit'
-       
+        
+        pod 'CollapsibleTableSectionViewController',
+            :git => 'https://github.com/austinzmchen/thirdParty-CollapsibleTableSectionViewController.git',
+            :branch => 'release/ACCustom1.4'
+
         # deployment
         pod 'Fabric'
         pod 'Crashlytics'

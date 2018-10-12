@@ -13,6 +13,7 @@ PODS:
   - CocoaLumberjack/Default (3.4.0)
   - CocoaLumberjack/Extensions (3.4.0):
     - CocoaLumberjack/Default
+  - CollapsibleTableSectionViewController (1.0.1)
   - Crashlytics (3.9.3):
     - Fabric (~> 1.7.2)
   - Fabric (1.7.2)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
   - CocoaLumberjack
+  - CollapsibleTableSectionViewController (from `https://github.com/austinzmchen/thirdParty-CollapsibleTableSectionViewController.git`, branch `release/ACCustom1.4`)
   - Crashlytics
   - Fabric
   - JTAppleCalendar
@@ -63,11 +65,17 @@ EXTERNAL SOURCES:
     :git: https://github.com/austinzmchen/ACKit.git
   ACSyncKit:
     :path: ACSyncKit
+  CollapsibleTableSectionViewController:
+    :branch: release/ACCustom1.4
+    :git: https://github.com/austinzmchen/thirdParty-CollapsibleTableSectionViewController.git
 
 CHECKOUT OPTIONS:
   ACKit:
     :commit: 531e84fa7e2292801b3e7e8bdcdd2b11e46b04ed
     :git: https://github.com/austinzmchen/ACKit.git
+  CollapsibleTableSectionViewController:
+    :commit: eee76b629500696f54b0f645d7476438db9dc02c
+    :git: https://github.com/austinzmchen/thirdParty-CollapsibleTableSectionViewController.git
 
 SPEC CHECKSUMS:
   ACKit: 21ca30fc21008582c2ad8b0818479271339d1972
@@ -75,6 +83,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CocoaLumberjack: e033a5d8513357af2dd456eb66e202c325c30627
+  CollapsibleTableSectionViewController: 4ff024a93b0a05ccd7b34eb13dfe2faa9c65093f
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
@@ -85,6 +94,6 @@ SPEC CHECKSUMS:
   RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: 9dcb3689382c66d79f4dee188fedb7b8f25891e2
+PODFILE CHECKSUM: 12417fdfe79f54cb19acc98e3b039db464f42355
 
 COCOAPODS: 1.6.0.beta.1

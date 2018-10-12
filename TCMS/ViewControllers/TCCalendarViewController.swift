@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+import CollapsibleTableSectionViewController
 
 class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType {
     
@@ -23,7 +24,7 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
         calendarView.scrollToDate(Date.init())
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: MBCollapsibleTableView!
     
     let outsideMonthColor = UIColor.init(red: 77/255.0, green: 77/255.0, blue: 77/255.0, alpha: 1)
     let monthColor = UIColor.black
@@ -35,14 +36,25 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     private var dateEventsDict = [String: [TCJsonSchedule]]()
     private var selectedDate: String?
     private var remote = TCScheduleRemote.init(remoteSession: nil)
+    private var sections: [TableSection] = [
+        TableSection(name: "Login & Security", icon: "login_security_icon", url: nil,items: [
+            TableItem(name: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", detail: "", url: nil)
+        ]),
+        TableSection(name: "The fine print", icon: "legal_icon", url: nil, items: [
+            TableItem(name: "Glossary of terms", detail: "", url: nil),
+            TableItem(name: "Privacy", detail: "", url: nil),
+            TableItem(name: "Security statement", detail: "", url: nil),
+            TableItem(name: "Terms of use", detail: "", url: nil),
+            TableItem(name: "Legal", detail: "", url: nil),
+            TableItem(name: "Electronic access agreement", detail: "", url: nil)
+        ])
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+        tableView.clpDelegate = self
         calendarView.scrollToDate(Date.init())
     }
     
@@ -179,22 +191,56 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
     }
 }
 
-extension TCCalendarViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension TCCalendarViewController: CollapsibleTableSectionDelegate {
+    
+    func numberOfSections(_ tableView: UITableView) -> Int {
         guard let sd = selectedDate else {return 0}
         return dateEventsDict[sd]?.count ?? 0
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "kCalendarTableCell", for: indexPath)
+    
+    func collapsibleTableView(_ tableView: UITableView, sectionInfoAt section: Int) -> TableSection? {
+        let section: TableSection = sections[section]
+        return section
+    }
+    
+    func collapsibleTableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
+    func collapsibleTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kMBMenuTableCell") as! MBMenuTableCell
         
         guard let sd = selectedDate,
             let events = dateEventsDict[sd]
             else {return cell}
-        
+
         let name = events[indexPath.row]
         cell.textLabel?.text = name.desc
         return cell
+    }
+    
+    // header/footer
+    func collapsibleTableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 68
+    }
+    
+    func collapsibleTableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func shouldCollapseByDefault(_ tableView: UITableView, section: Int) -> Bool {
+        return section != 0
+    }
+    
+    func shouldCollapseOthers(_ tableView: UITableView) -> Bool {
+        return false
+    }
+    
+    // action
+    func collapsibleTableView(_ tableView: UITableView, didSelectSectionHeaderAt section: Int) {}
+    
+    func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer { tableView.deselectRow(at: indexPath, animated: true) }
     }
 }
 
