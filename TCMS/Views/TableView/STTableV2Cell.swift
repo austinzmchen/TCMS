@@ -45,7 +45,7 @@ class STTableV2Cell: UITableViewCell {
         super.prepareForReuse()
         
         imgView.image = UIImage(named: "imgPlaceholder")
-        imgView.contentMode = .center
+        imgView.contentMode = .scaleAspectFit
         
         liveBeaconImageView.stopAnimating()
     }

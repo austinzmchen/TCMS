@@ -155,7 +155,8 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
-        cell.imgView.sdSetImage(withString: event.images.first?.path)
+        cell.imgView.contentMode = .scaleAspectFit
+        cell.imgView.sdSetImage(withString: "event.images.first?.path")
         cell.titleLabel.text = event.title
 
         cell.topBorderView.isHidden = indexPath.row == 2 + 1
