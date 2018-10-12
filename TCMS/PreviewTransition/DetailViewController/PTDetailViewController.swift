@@ -31,18 +31,10 @@ open class PTDetailViewController: UIViewController {
 
     var useCustomTransition = false
     fileprivate var backgroundImageView: UIImageView?
-}
-
-// MARK: life cicle
-
-extension PTDetailViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-
-        backgroundImageView = createBackgroundImage(bgImage)
-        view.backgroundColor = .init(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
-
+        
         if let titleText = self.titleText {
             title = titleText
         }
@@ -53,14 +45,7 @@ extension PTDetailViewController {
                 label.isHidden = true
             }
         }
-
-        _ = createNavBar()
     }
-}
-
-// MARK: public
-
-extension PTDetailViewController {
 
     /**
      Pops the top view controller from the navigation stack and updates the display with custom animation.
@@ -77,51 +62,5 @@ extension PTDetailViewController {
             }
         }
         _ = navigationController?.popViewController(animated: false)
-    }
-}
-
-// MARK: create
-
-extension PTDetailViewController {
-
-    fileprivate func createBackgroundImage(_ image: UIImage?) -> UIImageView {
-
-        let imageView = UIImageView(frame: CGRect.zero)
-        imageView.image = image
-        imageView.frame = view.bounds
-        imageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        imageView.contentMode = UIView.ContentMode.scaleAspectFill
-        view.insertSubview(imageView, at: 0)
-
-        return imageView
-    }
-
-    fileprivate func createNavBar() -> UIView {
-        let navBar = PTNavView()
-        
-        navBar.titleLabel.text = titleText
-        navBar.leftButton.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
-        navBar.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(navBar)
-        
-        for attributes: NSLayoutConstraint.Attribute in [.left, .right, .top] {
-            (view, navBar) >>>- {
-                $0.attribute = attributes
-                return
-            }
-        }
-        navBar >>>- {
-            $0.attribute = .height
-            var constant: CGFloat = 64
-            if #available(iOS 11.0, *) {
-                if let topPadding = UIApplication.shared.keyWindow?.safeAreaInsets.top {
-                    constant += topPadding
-                }
-            }
-            $0.constant = constant
-            return
-        }
-        
-        return navBar
     }
 }

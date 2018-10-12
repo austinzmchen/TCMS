@@ -17,18 +17,13 @@
 		C464D12A2120A6B900033106 /* TCScheduleRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D1292120A6B900033106 /* TCScheduleRemote.swift */; };
 		C48348AD215BCD33004A6F0F /* PTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A2215BCD33004A6F0F /* PTDetailViewController.swift */; };
 		C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A5215BCD33004A6F0F /* MovingViews.swift */; };
-		C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A6215BCD33004A6F0F /* PTTableViewController.swift */; };
 		C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A8215BCD33004A6F0F /* ConstraintsHalper.swift */; };
 		C48348B1215BCD33004A6F0F /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348AA215BCD33004A6F0F /* TimeExtensions.swift */; };
 		C48348B2215BCD33004A6F0F /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348AC215BCD33004A6F0F /* ParallaxCell.swift */; };
-		C48348B5215BCF33004A6F0F /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */; };
 		C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */; };
 		C48348B8215BD01B004A6F0F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B7215BD01B004A6F0F /* Extensions.swift */; };
 		C48348FE215BD089004A6F0F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348EB215BD089004A6F0F /* Images.swift */; };
-		C4834946215BD13B004A6F0F /* LayerAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */; };
 		C4834947215BD13B004A6F0F /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834945215BD13B004A6F0F /* ScreenShot.swift */; };
-		C483494F215C1F7A004A6F0F /* PTNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483494E215C1F7A004A6F0F /* PTNavView.swift */; };
-		C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4834950215C1F8A004A6F0F /* PTNavView.xib */; };
 		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
 		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
@@ -77,18 +72,13 @@
 		C464D1292120A6B900033106 /* TCScheduleRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCScheduleRemote.swift; sourceTree = "<group>"; };
 		C48348A2215BCD33004A6F0F /* PTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDetailViewController.swift; sourceTree = "<group>"; };
 		C48348A5215BCD33004A6F0F /* MovingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViews.swift; sourceTree = "<group>"; };
-		C48348A6215BCD33004A6F0F /* PTTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTTableViewController.swift; sourceTree = "<group>"; };
 		C48348A8215BCD33004A6F0F /* ConstraintsHalper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHalper.swift; sourceTree = "<group>"; };
 		C48348AA215BCD33004A6F0F /* TimeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
 		C48348AC215BCD33004A6F0F /* ParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
-		C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
 		C48348B7215BD01B004A6F0F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C48348EB215BD089004A6F0F /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationHelper.swift; sourceTree = "<group>"; };
 		C4834945215BD13B004A6F0F /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
-		C483494E215C1F7A004A6F0F /* PTNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNavView.swift; sourceTree = "<group>"; };
-		C4834950215C1F8A004A6F0F /* PTNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTNavView.xib; sourceTree = "<group>"; };
 		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
 		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
@@ -188,12 +178,8 @@
 			children = (
 				C49DCF6E215DD6C800B7A826 /* ElasticView.swift */,
 				C4EB8DC42169963D00CD59D0 /* ElasticView.xib */,
-				C483494E215C1F7A004A6F0F /* PTNavView.swift */,
-				C4834950215C1F8A004A6F0F /* PTNavView.xib */,
 				C48348B7215BD01B004A6F0F /* Extensions.swift */,
-				C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */,
 				C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */,
-				C4834942215BD13B004A6F0F /* AnimationHelpers */,
 				C4834944215BD13B004A6F0F /* ScreenShort */,
 				C48348EA215BD089004A6F0F /* Constants */,
 				C48348A1215BCD33004A6F0F /* DetailViewController */,
@@ -214,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				C48348A4215BCD33004A6F0F /* MovingLabel */,
-				C48348A6215BCD33004A6F0F /* PTTableViewController.swift */,
 				C48348A7215BCD33004A6F0F /* Halpers */,
 				C48348A9215BCD33004A6F0F /* Extensions */,
 				C48348AB215BCD33004A6F0F /* Cell */,
@@ -260,14 +245,6 @@
 				C48348EB215BD089004A6F0F /* Images.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		C4834942215BD13B004A6F0F /* AnimationHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */,
-			);
-			path = AnimationHelpers;
 			sourceTree = "<group>";
 		};
 		C4834944215BD13B004A6F0F /* ScreenShort */ = {
@@ -483,7 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */,
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
 				C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */,
@@ -565,9 +541,7 @@
 			files = (
 				C48348FE215BD089004A6F0F /* Images.swift in Sources */,
 				C4834947215BD13B004A6F0F /* ScreenShot.swift in Sources */,
-				C4834946215BD13B004A6F0F /* LayerAnimationHelper.swift in Sources */,
 				C48348B1215BCD33004A6F0F /* TimeExtensions.swift in Sources */,
-				C483494F215C1F7A004A6F0F /* PTNavView.swift in Sources */,
 				C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */,
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
@@ -578,7 +552,6 @@
 				C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */,
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
 				C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */,
-				C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */,
 				C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */,
@@ -592,7 +565,6 @@
 				C464D124211FDC1B00033106 /* TCEventProcessor.swift in Sources */,
 				C48348AD215BCD33004A6F0F /* PTDetailViewController.swift in Sources */,
 				C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */,
-				C48348B5215BCF33004A6F0F /* DemoTableViewController.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,

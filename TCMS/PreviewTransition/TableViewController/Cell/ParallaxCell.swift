@@ -136,8 +136,8 @@ extension ParallaxCell {
         }
         bgImage = backgroundImageView
 
-        foregroundView = createForegroundView(foregroundColor)
-        contentView.backgroundColor = UIColor.black
+        // foregroundView = createForegroundView(foregroundColor)
+        // contentView.backgroundColor = UIColor.black
 
         // create title label
         let titleLabel = createTitleLable()
@@ -219,7 +219,7 @@ extension ParallaxCell {
         let cellY = frame.origin.y - offsetY + frame.size.height / 2.0 + offsetY - tableView.frame.size.height / 2.0
         let cellFrame = CGRect(x: 0, y: cellY, width: tableView.frame.size.width, height: tableView.frame.size.height)
         frame = cellFrame
-//        superview.sendSubview(toBack: self)
+        // superview.sendSubview(toBack: self)
         superview.bringSubview(toFront: self)
 
         // animation
