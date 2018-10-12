@@ -36,19 +36,6 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     private var dateEventsDict = [String: [TCJsonSchedule]]()
     private var selectedDate: String?
     private var remote = TCScheduleRemote.init(remoteSession: nil)
-    private var sections: [TableSection] = [
-        TableSection(name: "Login & Security", icon: "login_security_icon", url: nil,items: [
-            TableItem(name: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", detail: "", url: nil)
-        ]),
-        TableSection(name: "The fine print", icon: "legal_icon", url: nil, items: [
-            TableItem(name: "Glossary of terms", detail: "", url: nil),
-            TableItem(name: "Privacy", detail: "", url: nil),
-            TableItem(name: "Security statement", detail: "", url: nil),
-            TableItem(name: "Terms of use", detail: "", url: nil),
-            TableItem(name: "Legal", detail: "", url: nil),
-            TableItem(name: "Electronic access agreement", detail: "", url: nil)
-        ])
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,11 +130,10 @@ extension TCCalendarViewController: JTAppleCalendarViewDataSource {
 
 extension TCCalendarViewController: JTAppleCalendarViewDelegate {
     
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        
-    }
+    func calendar(_ calendar: JTAppleCalendarView,
+                  willDisplay cell: JTAppleCell,
+                  forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {}
     
-
     // Display the cell
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
@@ -159,8 +145,6 @@ extension TCCalendarViewController: JTAppleCalendarViewDelegate {
             cell.selectedView.isHidden = false
             cell.selectedView.backgroundColor = .orange
         }
-        
-
         cell.eventsCount = dateEventsDict[date.tcDate]?.count ?? 0
         
         return cell
@@ -199,7 +183,11 @@ extension TCCalendarViewController: CollapsibleTableSectionDelegate {
     }
     
     func collapsibleTableView(_ tableView: UITableView, sectionInfoAt section: Int) -> TableSection? {
-        let section: TableSection = sections[section]
+        guard let sd = selectedDate,
+            let schedule = dateEventsDict[sd]?[section] else {return nil}
+        
+        let item = TableItem(name: "", detail: schedule.desc ?? "", url: nil)
+        let section = TableSection(name: schedule.title ?? "", icon: "", url: nil, items: [item])
         return section
     }
     
@@ -241,17 +229,6 @@ extension TCCalendarViewController: CollapsibleTableSectionDelegate {
     
     func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer { tableView.deselectRow(at: indexPath, animated: true) }
-    }
-}
-
-extension UIColor {
-    convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
-        self.init(
-            red: CGFloat((value & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((value & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(value & 0x0000FF) / 255.0,
-            alpha: alpha
-        )
     }
 }
 

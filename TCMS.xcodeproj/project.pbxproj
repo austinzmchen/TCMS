@@ -44,6 +44,7 @@
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
+		C492D01D21712B32001FCEEC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D01C21712B32001FCEEC /* UIColor+Hex.swift */; };
 		C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF66215C752D00B7A826 /* PTStuff.storyboard */; };
 		C49DCF69215DD43200B7A826 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */; };
 		C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* ElasticView.swift */; };
@@ -112,6 +113,7 @@
 		C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C492D01C21712B32001FCEEC /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C49DCF66215C752D00B7A826 /* PTStuff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PTStuff.storyboard; sourceTree = "<group>"; };
 		C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		C49DCF6E215DD6C800B7A826 /* ElasticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticView.swift; sourceTree = "<group>"; };
@@ -368,6 +370,14 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		C492D01B21712B15001FCEEC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C492D01C21712B32001FCEEC /* UIColor+Hex.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C49F61C8211F815300A94667 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +441,7 @@
 		C4F5E34C2022C4B800223DCC /* TCMS */ = {
 			isa = PBXGroup;
 			children = (
+				C492D01B21712B15001FCEEC /* Extension */,
 				C48348A0215BCD33004A6F0F /* PreviewTransition */,
 				C490F41A2026B1E400C370B2 /* Views */,
 				C490F4192026B1DB00C370B2 /* ViewControllers */,
@@ -619,6 +630,7 @@
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
 				C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */,
 				C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */,
+				C492D01D21712B32001FCEEC /* UIColor+Hex.swift in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */,
 				C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */,

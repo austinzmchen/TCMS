@@ -37,7 +37,8 @@ class MBCollapsibleTableViewDataDelegate: CollapsibleTableViewDataDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return nil
+        let reusableFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "kMBCollapsibleTableViewFooter") as! MBCollapsibleTableViewFooter
+        return reusableFooter
     }
     
 }
