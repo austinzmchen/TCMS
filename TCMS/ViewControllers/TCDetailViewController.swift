@@ -35,6 +35,7 @@ class TCDetailViewController: UIViewController {
         elasticHeaderView.maxExpandableHeight = 376
         elasticHeaderView.minExpandableHeight = 140
         
+        adjustOrientation()
         addOrientationChangeObserver()
     }
 }

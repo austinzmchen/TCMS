@@ -25,6 +25,10 @@ extension TCDetailViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        adjustOrientation()
+    }
+    
+    func adjustOrientation() {
         if UIDevice.current.orientation.isPortrait {
             blurView.isHidden = false
             gradientView.isHidden = false

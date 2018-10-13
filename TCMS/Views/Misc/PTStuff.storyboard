@@ -147,7 +147,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Wga-we-M55" secondAttribute="bottom" id="0vz-jc-aTd"/>
                             <constraint firstItem="RNu-NK-c1L" firstAttribute="top" secondItem="WFl-CW-a3U" secondAttribute="top" id="AbA-ZW-QMj"/>
@@ -275,7 +275,7 @@
                                 </variation>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qYq-zG-W3b">
-                                <rect key="frame" x="0.0" y="376" width="414" height="486"/>
+                                <rect key="frame" x="0.0" y="376" width="414" height="520"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
@@ -300,15 +300,15 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bAr-2b-wWZ" firstAttribute="leading" secondItem="hsx-lG-I29" secondAttribute="leading" id="0Ro-90-aU6"/>
-                            <constraint firstItem="nEu-iU-02y" firstAttribute="trailing" secondItem="qYq-zG-W3b" secondAttribute="trailing" id="3kG-LE-7aT"/>
-                            <constraint firstItem="nEu-iU-02y" firstAttribute="bottom" secondItem="bAr-2b-wWZ" secondAttribute="bottom" id="6h3-gN-4ZI"/>
+                            <constraint firstItem="qYq-zG-W3b" firstAttribute="trailing" secondItem="hsx-lG-I29" secondAttribute="trailing" id="3kG-LE-7aT"/>
+                            <constraint firstItem="bAr-2b-wWZ" firstAttribute="bottom" secondItem="hsx-lG-I29" secondAttribute="bottom" id="6h3-gN-4ZI"/>
                             <constraint firstAttribute="trailing" secondItem="bAr-2b-wWZ" secondAttribute="trailing" id="G10-dj-jC2"/>
                             <constraint firstItem="kSL-LW-aVS" firstAttribute="leading" secondItem="nEu-iU-02y" secondAttribute="leading" id="HIK-25-obD"/>
                             <constraint firstItem="kSL-LW-aVS" firstAttribute="top" secondItem="nEu-iU-02y" secondAttribute="top" id="RWm-CX-cW3"/>
                             <constraint firstItem="bAr-2b-wWZ" firstAttribute="top" secondItem="hsx-lG-I29" secondAttribute="top" id="VYd-iA-LDP"/>
-                            <constraint firstItem="nEu-iU-02y" firstAttribute="bottom" secondItem="qYq-zG-W3b" secondAttribute="bottom" id="YLx-gt-kuk"/>
+                            <constraint firstItem="qYq-zG-W3b" firstAttribute="bottom" secondItem="hsx-lG-I29" secondAttribute="bottom" id="YLx-gt-kuk"/>
                             <constraint firstItem="qYq-zG-W3b" firstAttribute="top" secondItem="bAr-2b-wWZ" secondAttribute="bottom" id="lrd-Tw-rOh"/>
-                            <constraint firstItem="qYq-zG-W3b" firstAttribute="leading" secondItem="nEu-iU-02y" secondAttribute="leading" id="ywn-9t-9qy"/>
+                            <constraint firstItem="qYq-zG-W3b" firstAttribute="leading" secondItem="hsx-lG-I29" secondAttribute="leading" id="ywn-9t-9qy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nEu-iU-02y"/>
                         <variation key="default">
