@@ -156,7 +156,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "kHomeTableCell1", for: indexPath) as! STTableV2Cell
         cell.imgView.contentMode = .scaleAspectFit
-        cell.imgView.sdSetImage(withString: "event.images.first?.path")
+        cell.imgView.sdSetImage(withString: event.images.first?.path)
         cell.titleLabel.text = event.title
 
         cell.topBorderView.isHidden = indexPath.row == 2 + 1
@@ -184,6 +184,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         if event.isFeatured {
             let detaleViewController = TCStoryboardFactory.ptStuffStoryboard
                 .instantiateInitialViewController() as! DemoDetailViewController
+            detaleViewController.useCustomTransition = true
             pushViewController(detaleViewController)
         } else {
             performSegue(withIdentifier: "kNormalCellPush", sender: nil)
@@ -245,11 +246,9 @@ extension TCMainViewController {
     
     /**
      Pushes a view controller onto the receiver’s stack and updates the display whith custom animation.
-     
      - parameter viewController: The view controller to push onto the stack.
      */
     public func pushViewController(_ viewController: PTDetailViewController) {
-        
         guard let currentCell = currentCell,
             let navigationController = self.navigationController else {
                 fatalError("current cell is empty or add navigationController")
@@ -263,7 +262,6 @@ extension TCMainViewController {
             }
         }
         
-        currentTextLabel = createTitleLable(currentCell)
         currentTextLabel?.move(duration, direction: .up, completion: nil)
         
         currentCell.openCell(tableView, duration: duration)
@@ -277,39 +275,6 @@ extension TCMainViewController {
         delay(duration) {
             navigationController.pushViewController(viewController, animated: false)
         }
-    }
-}
-
-extension TCMainViewController {
-    
-    fileprivate func createTitleLable(_ cell: ParallaxCell) -> MovingLabel {
-        
-        let yPosition = cell.frame.origin.y + cell.frame.size.height / 2.0 - 22 - tableView.contentOffset.y
-        let label = MovingLabel(frame: CGRect(x: 0, y: yPosition, width: UIScreen.main.bounds.size.width, height: 44))
-        label.textAlignment = .center
-        label.backgroundColor = .clear
-        if let font = cell.parallaxTitle?.font,
-            let text = cell.parallaxTitle?.text,
-            let textColor = cell.parallaxTitle?.textColor {
-            label.font = font
-            label.text = text
-            label.textColor = textColor
-        }
-        
-        navigationController?.view.addSubview(label)
-        return label
-    }
-    
-    fileprivate func createSeparator(_ color: UIColor?, height: CGFloat, cell: UITableViewCell) -> MovingView {
-        
-        let yPosition = cell.frame.origin.y + cell.frame.size.height - tableView.contentOffset.y
-        let separator = MovingView(frame: CGRect(x: 0.0, y: yPosition, width: tableView.bounds.size.width, height: height))
-        if let color = color {
-            separator.backgroundColor = color
-        }
-        separator.translatesAutoresizingMaskIntoConstraints = false
-        navigationController?.view.addSubview(separator)
-        return separator
     }
 }
 

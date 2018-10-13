@@ -28,6 +28,7 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     
     let outsideMonthColor = UIColor.init(red: 77/255.0, green: 77/255.0, blue: 77/255.0, alpha: 1)
     let monthColor = UIColor.black
+    
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
     let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
     
@@ -238,5 +239,16 @@ extension Date {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "yyyy-MM-dd"
         return dateFormatterPrint.string(from: self)
+    }
+}
+
+public extension UIColor {
+    public convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
+        self.init(
+            red: CGFloat((value & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((value & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(value & 0x0000FF) / 255.0,
+            alpha: alpha
+        )
     }
 }

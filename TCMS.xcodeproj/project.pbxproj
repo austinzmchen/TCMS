@@ -17,26 +17,13 @@
 		C464D12A2120A6B900033106 /* TCScheduleRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464D1292120A6B900033106 /* TCScheduleRemote.swift */; };
 		C48348AD215BCD33004A6F0F /* PTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A2215BCD33004A6F0F /* PTDetailViewController.swift */; };
 		C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A5215BCD33004A6F0F /* MovingViews.swift */; };
-		C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A6215BCD33004A6F0F /* PTTableViewController.swift */; };
 		C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348A8215BCD33004A6F0F /* ConstraintsHalper.swift */; };
 		C48348B1215BCD33004A6F0F /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348AA215BCD33004A6F0F /* TimeExtensions.swift */; };
 		C48348B2215BCD33004A6F0F /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348AC215BCD33004A6F0F /* ParallaxCell.swift */; };
-		C48348B5215BCF33004A6F0F /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */; };
 		C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */; };
 		C48348B8215BD01B004A6F0F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348B7215BD01B004A6F0F /* Extensions.swift */; };
 		C48348FE215BD089004A6F0F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48348EB215BD089004A6F0F /* Images.swift */; };
-		C4834946215BD13B004A6F0F /* LayerAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */; };
 		C4834947215BD13B004A6F0F /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834945215BD13B004A6F0F /* ScreenShot.swift */; };
-		C483494F215C1F7A004A6F0F /* PTNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483494E215C1F7A004A6F0F /* PTNavView.swift */; };
-		C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4834950215C1F8A004A6F0F /* PTNavView.xib */; };
-		C48666582170263D00173FAE /* MBCollapsibleTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */; };
-		C48666592170263D00173FAE /* MBCollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */; };
-		C486665A2170263D00173FAE /* MBMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666522170263D00173FAE /* MBMenuTableCell.swift */; };
-		C486665B2170263D00173FAE /* MBCollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */; };
-		C486665C2170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */; };
-		C486665D2170263D00173FAE /* MBCollapsibleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666552170263D00173FAE /* MBCollapsibleTableView.swift */; };
-		C486665E2170263D00173FAE /* MBCollapsibleTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */; };
-		C486665F2170263D00173FAE /* MBMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48666572170263D00173FAE /* MBMenuTableCell.xib */; };
 		C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490F40C2026ABD000C370B2 /* Drawer.storyboard */; };
 		C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */; };
 		C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */; };
@@ -44,7 +31,14 @@
 		C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F4172026AE0000C370B2 /* TCDrawerTableViewCell.swift */; };
 		C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */; };
 		C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F41F2026CCD700C370B2 /* CustomCell.swift */; };
-		C492D01D21712B32001FCEEC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D01C21712B32001FCEEC /* UIColor+Hex.swift */; };
+		C492D02721724D65001FCEEC /* MBCollapsibleTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = C492D01F21724D65001FCEEC /* MBCollapsibleTableViewFooter.xib */; };
+		C492D02821724D65001FCEEC /* MBCollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C492D02021724D65001FCEEC /* MBCollapsibleTableViewHeader.xib */; };
+		C492D02921724D65001FCEEC /* MBMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02121724D65001FCEEC /* MBMenuTableCell.swift */; };
+		C492D02A21724D65001FCEEC /* MBCollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02221724D65001FCEEC /* MBCollapsibleTableViewHeader.swift */; };
+		C492D02B21724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02321724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift */; };
+		C492D02C21724D65001FCEEC /* MBCollapsibleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02421724D65001FCEEC /* MBCollapsibleTableView.swift */; };
+		C492D02D21724D65001FCEEC /* MBCollapsibleTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02521724D65001FCEEC /* MBCollapsibleTableViewFooter.swift */; };
+		C492D02E21724D65001FCEEC /* MBMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C492D02621724D65001FCEEC /* MBMenuTableCell.xib */; };
 		C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF66215C752D00B7A826 /* PTStuff.storyboard */; };
 		C49DCF69215DD43200B7A826 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */; };
 		C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* ElasticView.swift */; };
@@ -86,26 +80,13 @@
 		C464D1292120A6B900033106 /* TCScheduleRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCScheduleRemote.swift; sourceTree = "<group>"; };
 		C48348A2215BCD33004A6F0F /* PTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDetailViewController.swift; sourceTree = "<group>"; };
 		C48348A5215BCD33004A6F0F /* MovingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViews.swift; sourceTree = "<group>"; };
-		C48348A6215BCD33004A6F0F /* PTTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTTableViewController.swift; sourceTree = "<group>"; };
 		C48348A8215BCD33004A6F0F /* ConstraintsHalper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHalper.swift; sourceTree = "<group>"; };
 		C48348AA215BCD33004A6F0F /* TimeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
 		C48348AC215BCD33004A6F0F /* ParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
-		C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
 		C48348B7215BD01B004A6F0F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C48348EB215BD089004A6F0F /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationHelper.swift; sourceTree = "<group>"; };
 		C4834945215BD13B004A6F0F /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
-		C483494E215C1F7A004A6F0F /* PTNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNavView.swift; sourceTree = "<group>"; };
-		C4834950215C1F8A004A6F0F /* PTNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTNavView.xib; sourceTree = "<group>"; };
-		C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewFooter.xib; sourceTree = "<group>"; };
-		C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
-		C48666522170263D00173FAE /* MBMenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBMenuTableCell.swift; sourceTree = "<group>"; };
-		C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
-		C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewDataDelegate.swift; sourceTree = "<group>"; };
-		C48666552170263D00173FAE /* MBCollapsibleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableView.swift; sourceTree = "<group>"; };
-		C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewFooter.swift; sourceTree = "<group>"; };
-		C48666572170263D00173FAE /* MBMenuTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBMenuTableCell.xib; sourceTree = "<group>"; };
 		C490F40C2026ABD000C370B2 /* Drawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawer.storyboard; sourceTree = "<group>"; };
 		C490F40F2026ABE600C370B2 /* TCDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerViewController.swift; sourceTree = "<group>"; };
 		C490F4102026ABE600C370B2 /* TCDrawerMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDrawerMasterViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +95,14 @@
 		C490F41D2026B2F400C370B2 /* TCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCalendarViewController.swift; sourceTree = "<group>"; };
 		C490F41F2026CCD700C370B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C492D01C21712B32001FCEEC /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		C492D01F21724D65001FCEEC /* MBCollapsibleTableViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewFooter.xib; sourceTree = "<group>"; };
+		C492D02021724D65001FCEEC /* MBCollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
+		C492D02121724D65001FCEEC /* MBMenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBMenuTableCell.swift; sourceTree = "<group>"; };
+		C492D02221724D65001FCEEC /* MBCollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		C492D02321724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewDataDelegate.swift; sourceTree = "<group>"; };
+		C492D02421724D65001FCEEC /* MBCollapsibleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableView.swift; sourceTree = "<group>"; };
+		C492D02521724D65001FCEEC /* MBCollapsibleTableViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewFooter.swift; sourceTree = "<group>"; };
+		C492D02621724D65001FCEEC /* MBMenuTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBMenuTableCell.xib; sourceTree = "<group>"; };
 		C49DCF66215C752D00B7A826 /* PTStuff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PTStuff.storyboard; sourceTree = "<group>"; };
 		C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		C49DCF6E215DD6C800B7A826 /* ElasticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticView.swift; sourceTree = "<group>"; };
@@ -206,12 +195,8 @@
 			children = (
 				C49DCF6E215DD6C800B7A826 /* ElasticView.swift */,
 				C4EB8DC42169963D00CD59D0 /* ElasticView.xib */,
-				C483494E215C1F7A004A6F0F /* PTNavView.swift */,
-				C4834950215C1F8A004A6F0F /* PTNavView.xib */,
 				C48348B7215BD01B004A6F0F /* Extensions.swift */,
-				C48348B3215BCF33004A6F0F /* DemoTableViewController.swift */,
 				C48348B4215BCF33004A6F0F /* DemoDetailViewController.swift */,
-				C4834942215BD13B004A6F0F /* AnimationHelpers */,
 				C4834944215BD13B004A6F0F /* ScreenShort */,
 				C48348EA215BD089004A6F0F /* Constants */,
 				C48348A1215BCD33004A6F0F /* DetailViewController */,
@@ -232,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				C48348A4215BCD33004A6F0F /* MovingLabel */,
-				C48348A6215BCD33004A6F0F /* PTTableViewController.swift */,
 				C48348A7215BCD33004A6F0F /* Halpers */,
 				C48348A9215BCD33004A6F0F /* Extensions */,
 				C48348AB215BCD33004A6F0F /* Cell */,
@@ -280,35 +264,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		C4834942215BD13B004A6F0F /* AnimationHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				C4834943215BD13B004A6F0F /* LayerAnimationHelper.swift */,
-			);
-			path = AnimationHelpers;
-			sourceTree = "<group>";
-		};
 		C4834944215BD13B004A6F0F /* ScreenShort */ = {
 			isa = PBXGroup;
 			children = (
 				C4834945215BD13B004A6F0F /* ScreenShot.swift */,
 			);
 			path = ScreenShort;
-			sourceTree = "<group>";
-		};
-		C486664F2170263D00173FAE /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				C48666522170263D00173FAE /* MBMenuTableCell.swift */,
-				C48666572170263D00173FAE /* MBMenuTableCell.xib */,
-				C48666532170263D00173FAE /* MBCollapsibleTableViewHeader.swift */,
-				C48666512170263D00173FAE /* MBCollapsibleTableViewHeader.xib */,
-				C48666542170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift */,
-				C48666552170263D00173FAE /* MBCollapsibleTableView.swift */,
-				C48666562170263D00173FAE /* MBCollapsibleTableViewFooter.swift */,
-				C48666502170263D00173FAE /* MBCollapsibleTableViewFooter.xib */,
-			);
-			path = Calendar;
 			sourceTree = "<group>";
 		};
 		C490F40E2026ABE600C370B2 /* Drawers */ = {
@@ -323,7 +284,7 @@
 		C490F4192026B1DB00C370B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C486664F2170263D00173FAE /* Calendar */,
+				C492D01E21724D65001FCEEC /* Calendar */,
 				C490F40E2026ABE600C370B2 /* Drawers */,
 				C4F5E34F2022C4B800223DCC /* TCMainViewController.swift */,
 				C4F5E3622022C95F00223DCC /* TCMainCollectionDataDelegate.swift */,
@@ -376,6 +337,21 @@
 				C492D01C21712B32001FCEEC /* UIColor+Hex.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C492D01E21724D65001FCEEC /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C492D01F21724D65001FCEEC /* MBCollapsibleTableViewFooter.xib */,
+				C492D02021724D65001FCEEC /* MBCollapsibleTableViewHeader.xib */,
+				C492D02121724D65001FCEEC /* MBMenuTableCell.swift */,
+				C492D02221724D65001FCEEC /* MBCollapsibleTableViewHeader.swift */,
+				C492D02321724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift */,
+				C492D02421724D65001FCEEC /* MBCollapsibleTableView.swift */,
+				C492D02521724D65001FCEEC /* MBCollapsibleTableViewFooter.swift */,
+				C492D02621724D65001FCEEC /* MBMenuTableCell.xib */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		C49F61C8211F815300A94667 /* Models */ = {
@@ -526,17 +502,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C486665F2170263D00173FAE /* MBMenuTableCell.xib in Resources */,
-				C4834951215C1F8A004A6F0F /* PTNavView.xib in Resources */,
+				C492D02E21724D65001FCEEC /* MBMenuTableCell.xib in Resources */,
 				C4F5E35B2022C4B800223DCC /* LaunchScreen.storyboard in Resources */,
 				C490F40D2026ABD100C370B2 /* Drawer.storyboard in Resources */,
 				C4A0BD0A209387BC001D1AF4 /* STTableHeroCell.xib in Resources */,
 				C4A0BD0D209387BC001D1AF4 /* STTableV2Cell.xib in Resources */,
 				C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */,
+				C492D02721724D65001FCEEC /* MBCollapsibleTableViewFooter.xib in Resources */,
 				C4F5E3582022C4B800223DCC /* Assets.xcassets in Resources */,
-				C48666592170263D00173FAE /* MBCollapsibleTableViewHeader.xib in Resources */,
 				C4EB8DC52169963D00CD59D0 /* ElasticView.xib in Resources */,
-				C48666582170263D00173FAE /* MBCollapsibleTableViewFooter.xib in Resources */,
+				C492D02821724D65001FCEEC /* MBCollapsibleTableViewHeader.xib in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,24 +588,18 @@
 			files = (
 				C48348FE215BD089004A6F0F /* Images.swift in Sources */,
 				C4834947215BD13B004A6F0F /* ScreenShot.swift in Sources */,
-				C4834946215BD13B004A6F0F /* LayerAnimationHelper.swift in Sources */,
 				C48348B1215BCD33004A6F0F /* TimeExtensions.swift in Sources */,
-				C483494F215C1F7A004A6F0F /* PTNavView.swift in Sources */,
 				C49F61CA211F817B00A94667 /* TCEventRemote.swift in Sources */,
+				C492D02921724D65001FCEEC /* MBMenuTableCell.swift in Sources */,
 				C490F4122026ABE600C370B2 /* TCDrawerMasterViewController.swift in Sources */,
 				C4F5E3502022C4B800223DCC /* TCMainViewController.swift in Sources */,
-				C486665A2170263D00173FAE /* MBMenuTableCell.swift in Sources */,
 				C49F61D0211F83EF00A94667 /* TCJsonResult.swift in Sources */,
-				C486665B2170263D00173FAE /* MBCollapsibleTableViewHeader.swift in Sources */,
 				C49F61CE211F834100A94667 /* TCJsonImage.swift in Sources */,
-				C486665C2170263D00173FAE /* MBCollapsibleTableViewDataDelegate.swift in Sources */,
 				C48348B2215BCD33004A6F0F /* ParallaxCell.swift in Sources */,
 				C490F4202026CCD800C370B2 /* CustomCell.swift in Sources */,
 				C48348B0215BCD33004A6F0F /* ConstraintsHalper.swift in Sources */,
 				C4A0BD1320938809001D1AF4 /* KCParallaxView.m in Sources */,
 				C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */,
-				C48348AF215BCD33004A6F0F /* PTTableViewController.swift in Sources */,
-				C492D01D21712B32001FCEEC /* UIColor+Hex.swift in Sources */,
 				C4A0BD1420938809001D1AF4 /* UIImageView+Aldo.m in Sources */,
 				C48348B6215BCF33004A6F0F /* DemoDetailViewController.swift in Sources */,
 				C48348AE215BCD33004A6F0F /* MovingViews.swift in Sources */,
@@ -639,24 +608,25 @@
 				C41C631F216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift in Sources */,
 				C4E0E3ED209021D70031BBB8 /* TCMainTopCollectionCell.swift in Sources */,
 				C464D1282120A4B000033106 /* TCJsonSchedule.swift in Sources */,
+				C492D02D21724D65001FCEEC /* MBCollapsibleTableViewFooter.swift in Sources */,
 				C490F4162026AD0C00C370B2 /* TCStoryboardFactory.swift in Sources */,
 				C464D12A2120A6B900033106 /* TCScheduleRemote.swift in Sources */,
 				C464D124211FDC1B00033106 /* TCEventProcessor.swift in Sources */,
 				C48348AD215BCD33004A6F0F /* PTDetailViewController.swift in Sources */,
 				C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */,
-				C48348B5215BCF33004A6F0F /* DemoTableViewController.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
-				C486665D2170263D00173FAE /* MBCollapsibleTableView.swift in Sources */,
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
-				C486665E2170263D00173FAE /* MBCollapsibleTableViewFooter.swift in Sources */,
+				C492D02C21724D65001FCEEC /* MBCollapsibleTableView.swift in Sources */,
 				C4F5E3632022C95F00223DCC /* TCMainCollectionDataDelegate.swift in Sources */,
+				C492D02A21724D65001FCEEC /* MBCollapsibleTableViewHeader.swift in Sources */,
 				C4ADDDE62134C96A00714179 /* AppDelegate+Orientation.swift in Sources */,
 				C4F5E34E2022C4B800223DCC /* AppDelegate.swift in Sources */,
 				C464D121211FDB5700033106 /* TCSyncCoordinator.swift in Sources */,
 				C464D126211FDDDF00033106 /* UIImageView+SDWebImage.swift in Sources */,
 				C4E0E3E72087906D0031BBB8 /* TCAboutUsViewController.swift in Sources */,
+				C492D02B21724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift in Sources */,
 				C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */,
 				C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
