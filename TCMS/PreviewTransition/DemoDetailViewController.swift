@@ -41,6 +41,8 @@ public class DemoDetailViewController: PTDetailViewController {
         popViewController()
     }
 
+    var event: TCJsonEvent?
+    
     var isFullScreened = false {
         didSet {
             if isFullScreened {
@@ -64,12 +66,15 @@ public class DemoDetailViewController: PTDetailViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        bgImageView.image = bgImage
-        titleLabel.text = titleText
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped(_:)))
         bgImageView.addGestureRecognizer(tap)
         bgImageView.isUserInteractionEnabled = true
+        
+        // set up content
+        // bgImageView.image = bgImage
+        bgImageView.sdSetImage(withString: event?.images.first?.path)
+        titleLabel.text = event?.title
+        textView.text = event?.desc
     }
     
     @objc private func tapped(_ target: Any) {

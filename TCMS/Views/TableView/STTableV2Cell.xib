@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -84,36 +84,14 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="021-7P-6j0" userLabel="liveView">
-                        <rect key="frame" x="179" y="15.333333333333336" width="22.666666666666657" height="14"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="LIVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2c-ub-D4a">
-                                <rect key="frame" x="0.0" y="0.0" width="24.666666666666668" height="14"/>
-                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="12"/>
-                                <color key="textColor" red="0.08235294118" green="0.58431372550000005" blue="0.82745098039999998" alpha="0.70349957190000001" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_live" translatesAutoresizingMaskIntoConstraints="NO" id="AW5-lt-FUB">
-                                <rect key="frame" x="30.666666666666657" y="-1" width="18" height="12"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="n2c-ub-D4a" firstAttribute="leading" secondItem="021-7P-6j0" secondAttribute="leading" id="N5k-JP-EPw"/>
-                            <constraint firstItem="n2c-ub-D4a" firstAttribute="top" secondItem="021-7P-6j0" secondAttribute="top" id="VgT-jd-Zqv"/>
-                            <constraint firstAttribute="bottom" secondItem="n2c-ub-D4a" secondAttribute="bottom" id="foo-ou-a9N"/>
-                            <constraint firstItem="AW5-lt-FUB" firstAttribute="leading" secondItem="n2c-ub-D4a" secondAttribute="trailing" constant="6" id="lkW-vF-3R1"/>
-                            <constraint firstItem="AW5-lt-FUB" firstAttribute="top" secondItem="021-7P-6j0" secondAttribute="top" constant="-1" id="rAd-bC-Nfj"/>
-                        </constraints>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:10" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBV-e4-Fxd" userLabel="durationLabel">
-                        <rect key="frame" x="179" y="16.333333333333332" width="22.666666666666657" height="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec 1st, 18" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBV-e4-Fxd" userLabel="durationLabel">
+                        <rect key="frame" x="179" y="16.333333333333332" width="57.666666666666657" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• MODERN GEEK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-oG-OFl" userLabel="genreLabel">
-                        <rect key="frame" x="205.66666666666666" y="16.333333333333332" width="86.999999999999972" height="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Richmond Theater" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-oG-OFl" userLabel="genreLabel">
+                        <rect key="frame" x="240.66666666666666" y="16.333333333333332" width="97.666666666666657" height="13"/>
                         <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -124,10 +102,10 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNCENSORED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUp-QY-cQg" userLabel="unCensored">
-                        <rect key="frame" x="179" y="79.333333333333329" width="76" height="13"/>
-                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="11"/>
-                        <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="徐老师， 陈老师" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUp-QY-cQg" userLabel="unCensored">
+                        <rect key="frame" x="179" y="79.333333333333329" width="82" height="13"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                        <color key="textColor" red="0.61479154810000003" green="0.70795763590000005" blue="0.38800435659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="2" height="2"/>
                     </label>
@@ -150,18 +128,15 @@
                     <constraint firstItem="nj2-1a-HxK" firstAttribute="top" secondItem="cvf-cT-fdH" secondAttribute="top" id="Ofc-dY-ymX"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lA8-T9-keE" secondAttribute="trailing" constant="15" id="QZn-gS-zc8"/>
                     <constraint firstAttribute="bottomMargin" secondItem="JC8-Kj-wvX" secondAttribute="bottom" constant="62" id="RmV-SN-7bt"/>
-                    <constraint firstItem="WBV-e4-Fxd" firstAttribute="bottom" secondItem="021-7P-6j0" secondAttribute="bottom" id="XwQ-9n-f9P"/>
                     <constraint firstItem="lA8-T9-keE" firstAttribute="leading" secondItem="ZUp-QY-cQg" secondAttribute="leading" id="YTq-Qr-HXD"/>
                     <constraint firstAttribute="trailing" secondItem="inM-s5-Q2d" secondAttribute="trailing" constant="10" id="Zfh-Kj-ucA"/>
                     <constraint firstAttribute="bottom" secondItem="nj2-1a-HxK" secondAttribute="bottom" constant="10" id="b2X-TI-EbO"/>
                     <constraint firstItem="nj2-1a-HxK" firstAttribute="trailing" secondItem="cvf-cT-fdH" secondAttribute="trailing" id="b2e-8U-Ms8"/>
                     <constraint firstItem="JC8-Kj-wvX" firstAttribute="leading" secondItem="nj2-1a-HxK" secondAttribute="leading" constant="5" id="iTf-2L-hZj"/>
-                    <constraint firstItem="WBV-e4-Fxd" firstAttribute="centerX" secondItem="021-7P-6j0" secondAttribute="centerX" id="jj4-PB-7ID"/>
                     <constraint firstItem="WBV-e4-Fxd" firstAttribute="leading" secondItem="lA8-T9-keE" secondAttribute="leading" id="m63-Lo-Ggj"/>
                     <constraint firstItem="WBV-e4-Fxd" firstAttribute="leading" secondItem="nj2-1a-HxK" secondAttribute="trailing" constant="15" id="oP6-lB-QbW"/>
                     <constraint firstItem="hSM-oG-OFl" firstAttribute="leading" secondItem="WBV-e4-Fxd" secondAttribute="trailing" constant="4" id="pCX-TF-gif"/>
                     <constraint firstItem="nj2-1a-HxK" firstAttribute="leading" secondItem="w9L-2w-6Od" secondAttribute="leading" constant="10" id="rHt-ED-ZWr"/>
-                    <constraint firstItem="WBV-e4-Fxd" firstAttribute="leading" secondItem="021-7P-6j0" secondAttribute="leading" id="uCe-nx-CDs"/>
                     <constraint firstItem="cvf-cT-fdH" firstAttribute="bottom" secondItem="nj2-1a-HxK" secondAttribute="bottom" id="vJ2-qH-uWx"/>
                     <constraint firstItem="lA8-T9-keE" firstAttribute="centerY" secondItem="w9L-2w-6Od" secondAttribute="centerY" constant="2" id="vLp-O2-utC"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hSM-oG-OFl" secondAttribute="trailing" constant="15" id="vq5-w4-iR1"/>
@@ -178,8 +153,6 @@
                 <outlet property="genreLabel" destination="hSM-oG-OFl" id="gpy-yD-aFO"/>
                 <outlet property="imgGradientView" destination="cvf-cT-fdH" id="bqR-1f-9gi"/>
                 <outlet property="imgView" destination="nj2-1a-HxK" id="fQR-Ur-ASf"/>
-                <outlet property="liveBeaconImageView" destination="AW5-lt-FUB" id="W7f-SY-kUv"/>
-                <outlet property="liveView" destination="021-7P-6j0" id="aXE-P1-qBF"/>
                 <outlet property="titleLabel" destination="lA8-T9-keE" id="HW3-Ef-bwS"/>
                 <outlet property="topBorderView" destination="1q1-Sz-CY6" id="bfX-A2-VhZ"/>
                 <outlet property="uncensorLabel" destination="ZUp-QY-cQg" id="sJf-uQ-zH9"/>
@@ -189,6 +162,5 @@
     </objects>
     <resources>
         <image name="feedFiller" width="165" height="93"/>
-        <image name="ic_live" width="18" height="12"/>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class TCScheduleRemote: ACRemote, TCScheduleRemoteType {
         // pass empty dict to trigger custom encoding routines
         let includeAll = "?$include=*"
         
-        let request = self.alamoFireManager.request("http://35.173.187.144:3000" + path , headers: self.remoteSession?.postAuthenticationHttpHeaders)
+        let request = self.alamoFireManager.request(baseUrl + path , headers: self.remoteSession?.postAuthenticationHttpHeaders)
         request.responseObject(queue: ACRemoteSettings.concurrentQueue) { (response: DataResponse<TCJsonSchedulesResult>) in
             if response.isValid,
                 let v = response.result.value {

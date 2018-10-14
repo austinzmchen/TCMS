@@ -19,12 +19,15 @@ class TCMainCollectionDataDelegate: NSObject {
 
 extension TCMainCollectionDataDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return vc.featuredEvents.first?.images.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kCollectionCell", for: indexPath) as! TCMainTopCollectionCell
-        cell.imgView.image = UIImage(named: "dummyPhoto")
+        
+        if let path = vc.featuredEvents.first?.images[indexPath.row].path {
+            cell.imgView.sdSetImage(withString: path)
+        }
         return cell
     }
     
@@ -44,6 +47,7 @@ extension TCMainCollectionDataDelegate: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // push using segue
     }
 }
 

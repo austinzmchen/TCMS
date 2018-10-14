@@ -40,7 +40,10 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
     }()
     
     private var remote = TCEventRemote(remoteSession: nil)
-    private var events: [TCJsonEvent] = []
+    var featuredEvents: [TCJsonEvent] = [] // only use the first one, which is the latest, that has multple images
+    var events: [TCJsonEvent] = []
+    
+    private var tokenBag = ACNoteObserverTokenBag()
     
     let items = [("1", "River cruise"), ("2", "North Island"), ("3", "Mountain trail"), ("4", "Southern Coast"), ("5", "Fishing place")] // image
     
@@ -57,8 +60,6 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         
         // collectionView2.delegate = self
         // collectionView2.dataSource = self
-        
-        pageControl.numberOfPages = 3
         
         // elastic
         var f = headerView1.frame
@@ -79,14 +80,10 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         tableView.register(UINib.init(nibName: "STTableV2Cell", bundle: nil), forCellReuseIdentifier: "kHomeTableCell1")
         tableView.register(UINib.init(nibName: "STTableHeroCell", bundle: nil), forCellReuseIdentifier: "kHomeTableHeroCell")
         
-        remote.fetchCollections(byPath: "") { (result) in
-            if case .success(let value) = result {
-                DispatchQueue.main.async {
-                    self.events = value.data
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        reloadAll()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidBecomeActive, object: nil, queue: nil) { (note) in
+            self.reloadAll()
+        }.addDisposableToken(to: tokenBag)
     }
     
     override func viewWillLayoutSubviews() {
@@ -111,6 +108,36 @@ class TCMainViewController: UIViewController, TCDrawerItemViewControllerType {
         closeCurrentCellIfNeed(duration)
         moveDownCurrentLabelIfNeed()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "pushDetailViewController2" {
+            (segue.destination as? TCDetailViewController)?.event = featuredEvents.first
+        }
+    }
+    
+    func reloadAll() {
+        remote.fetchCollections(byPath: "?isFeatured=true") { (result) in
+            if case .success(let value) = result {
+                DispatchQueue.main.async {
+                    self.featuredEvents = value.data
+                    
+                    self.pageControl.numberOfPages = self.featuredEvents.first?.images.count ?? 0
+                    self.pageControl.setNeedsDisplay()
+                    self.collectionView1.reloadData()
+                }
+            }
+        }
+        remote.fetchCollections(byPath: "?isFeatured=false") { (result) in
+            if case .success(let value) = result {
+                DispatchQueue.main.async {
+                    self.events = value.data
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -134,7 +161,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let event = events[indexPath.row]
-        if event.isFeatured {
+        if event.isHero {
             // return 180
             return 240
         }
@@ -143,7 +170,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
-        if event.isFeatured {
+        if event.isHero {
             let cell: ParallaxCell = tableView.getReusableCellWithIdentifier(indexPath: indexPath)
             if let p = event.images.first?.path {
                 SDWebImageManager.shared().loadImage(with: URL.init(string: p), options: [], progress: nil) { (image, _, _, _, _, _) in
@@ -181,13 +208,17 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let event = events[indexPath.row]
-        if event.isFeatured {
+        if event.isHero {
             let detaleViewController = TCStoryboardFactory.ptStuffStoryboard
                 .instantiateInitialViewController() as! DemoDetailViewController
+            detaleViewController.event = event
             detaleViewController.useCustomTransition = true
             pushViewController(detaleViewController)
         } else {
-            performSegue(withIdentifier: "kNormalCellPush", sender: nil)
+            let detailVC = TCStoryboardFactory.ptStuffStoryboard
+                .instantiateViewController(withIdentifier: "DetailViewController2") as! TCDetailViewController
+            detailVC.event = event
+            navigationController?.pushViewController(detailVC, animated: true)
         }
     }
     

@@ -12,11 +12,8 @@ import ACKit
 class STTableV2Cell: UITableViewCell {
     
     @IBOutlet weak var bottomBorderConstraintHeight: NSLayoutConstraint!
-    @IBOutlet weak var genreLabelXConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var liveView: UIView!
-    @IBOutlet weak var liveBeaconImageView: UIImageView!
     @IBOutlet weak var upNextView: ACView!
     //    @IBOutlet weak var upNextLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -46,42 +43,11 @@ class STTableV2Cell: UITableViewCell {
         
         imgView.image = UIImage(named: "imgPlaceholder")
         imgView.contentMode = .scaleAspectFit
-        
-        liveBeaconImageView.stopAnimating()
     }
     
     var isUpNext: Bool = false {
         didSet {
             self.upNextView.isHidden = !isUpNext
-        }
-    }
-    
-    var isLiveStream: Bool = false {
-        didSet {
-            self.durationLabel.isHidden = isLiveStream
-            self.liveView.isHidden = !isLiveStream
-            
-            if isLiveStream {
-                /* commented for now, may lead later
-                 var imgArray: [UIImage] = []
-                 
-                 for i in 0..<45 {
-                 let n = String(format: "live-sig_%02d", i)
-                 guard let img = UIImage(named: n) else { continue }
-                 imgArray.append(img)
-                 }
-                 
-                 liveBeaconImageView.animationImages = imgArray
-                 liveBeaconImageView.animationRepeatCount = 0
-                 liveBeaconImageView.animationDuration = 1.5
-                 liveBeaconImageView.startAnimating()
-                 */
-                
-                // genreLabelXConstraint.constant = 244
-            }
-            else {
-                // genreLabelXConstraint.constant = 214
-            }
         }
     }
     
@@ -92,7 +58,7 @@ class STTableV2Cell: UITableViewCell {
     }
     
     func setGenre(title:String?, genreIcon iconName: String?) {
-        if let iName = iconName {
+        if let _ = iconName {
             //genreLogoImageView.sd_setImage(with: URL(string: iName))
             genreLabel.text = ""
         } else {

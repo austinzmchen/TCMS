@@ -29,8 +29,8 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
     let outsideMonthColor = UIColor.init(red: 77/255.0, green: 77/255.0, blue: 77/255.0, alpha: 1)
     let monthColor = UIColor.black
     
-    let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
-    let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
+    let selectedMonthColor = UIColor.init(red: 58/255.0, green: 41/255.0, blue: 75/255.0, alpha: 1)
+    let currentDateSelectedViewColor = UIColor.init(red: 78/255.0, green: 63/255.0, blue: 93/255.0, alpha: 1)
     
     let formatter = DateFormatter()
     
@@ -108,6 +108,7 @@ class TCCalendarViewController: UIViewController, TCDrawerItemViewControllerType
                         df.string(from: schedule.startAt!).components(separatedBy: "T").first!
                     })
                     self.dateEventsDict.merge(dict, uniquingKeysWith: { (_, new) -> [TCJsonSchedule] in new })
+                    self.calendarView.reloadData()
                     self.tableView.reloadData()
                 }
             }
@@ -188,7 +189,14 @@ extension TCCalendarViewController: CollapsibleTableSectionDelegate {
             let schedule = dateEventsDict[sd]?[section] else {return nil}
         
         let item = TableItem(name: "", detail: schedule.desc ?? "", url: nil)
-        let section = TableSection(name: schedule.title ?? "", icon: "", url: nil, items: [item])
+        
+        var timeText: String!
+        if let startTime = schedule.startAt, let duration = schedule.duration {
+            timeText = tcTime(from: startTime, duration: duration)
+        } else {
+            timeText = ""
+        }
+        let section = TableSection(name: schedule.title ?? "", icon: timeText, url: nil, items: [item])
         return section
     }
     
@@ -204,7 +212,7 @@ extension TCCalendarViewController: CollapsibleTableSectionDelegate {
             else {return cell}
 
         let name = events[indexPath.row]
-        cell.textLabel?.text = name.desc
+        cell.titleLabel?.text = name.desc
         return cell
     }
     
@@ -240,6 +248,18 @@ extension Date {
         dateFormatterPrint.dateFormat = "yyyy-MM-dd"
         return dateFormatterPrint.string(from: self)
     }
+}
+
+func tcTime(from date: Date, duration seconds: Int) -> String {
+    var date = date
+    let dateFormatterPrint = DateFormatter()
+    dateFormatterPrint.dateFormat = "HH:mm"
+    
+    let fromTime = dateFormatterPrint.string(from: date)
+    
+    date.addTimeInterval(Double(seconds))
+    let toTime = dateFormatterPrint.string(from: date)
+    return "\(fromTime) - \(toTime)"
 }
 
 public extension UIColor {

@@ -17,6 +17,7 @@ class MBCollapsibleTableViewDataDelegate: CollapsibleTableViewDataDelegate {
             else { return header }
         
         header.titleLabel.text = sectionInfo.name
+        header.timeLabel.text = sectionInfo.icon
         header.separatorStyle = .none
         
         // collapse status

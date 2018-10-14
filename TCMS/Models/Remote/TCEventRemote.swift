@@ -20,7 +20,7 @@ class TCEventRemote: ACRemote, TCEventRemoteType {
         // pass empty dict to trigger custom encoding routines
         let includeAll = "?$include=*"
         
-        let request = self.alamoFireManager.request("http://35.173.187.144:3000/events", headers: self.remoteSession?.postAuthenticationHttpHeaders)
+        let request = self.alamoFireManager.request("\(baseUrl)/events\(path)", headers: self.remoteSession?.postAuthenticationHttpHeaders)
         request.responseObject(queue: ACRemoteSettings.concurrentQueue) { (response: DataResponse<TCJsonEventsResult>) in
             if response.isValid,
                 let v = response.result.value {

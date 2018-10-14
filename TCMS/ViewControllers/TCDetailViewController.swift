@@ -14,9 +14,10 @@ class TCDetailViewController: UIViewController {
     @IBOutlet weak var elasticHeaderView: ElasticView!
     @IBOutlet var blurView: UIVisualEffectView!
     
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var gradientView: ACGradientView!
     @IBOutlet weak var infoView: UIView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -25,6 +26,7 @@ class TCDetailViewController: UIViewController {
     
     // methods
     var noteTokenBag = ACNoteObserverTokenBag()
+    var event: TCJsonEvent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,11 @@ class TCDetailViewController: UIViewController {
         
         elasticHeaderView.maxExpandableHeight = 376
         elasticHeaderView.minExpandableHeight = 140
+        
+        // set up content
+        elasticHeaderView.eImageView.sdSetImage(withString: event?.images.first?.path)
+        titleLabel.text = event?.title
+        textView.text = event?.desc
         
         adjustOrientation()
         addOrientationChangeObserver()

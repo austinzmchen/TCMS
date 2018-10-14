@@ -14,6 +14,10 @@ class CustomCell: JTAppleCell {
     @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var dotsStackview: UIStackView!
     
+    @IBOutlet weak var dot1: UIView!
+    @IBOutlet weak var dot2: UIView!
+    @IBOutlet weak var plusView: UIView!
+    
     var eventsCount: Int = 0 {
         didSet {
             if eventsCount == 0 {
@@ -22,11 +26,22 @@ class CustomCell: JTAppleCell {
                 dotsStackview.isHidden = false
                 
                 if eventsCount == 1 {
-                    dotsStackview.subviews.first?.isHidden = true
+                    dot2.isHidden = true
+                    plusView.isHidden = true
+                } else if eventsCount == 2 {
+                    dot2.isHidden = false
+                    plusView.isHidden = true
                 } else {
-                    dotsStackview.subviews.first?.isHidden = true
+                    plusView.isHidden = false
                 }
             }
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        dotsStackview.isHidden = false
+        dotsStackview.subviews.forEach{$0.isHidden = false}
     }
 }
