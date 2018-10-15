@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ElasticView" customModule="TCMS" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="NuZ-sD-8XO" id="iEo-hM-sIL"/>
                 <outlet property="contentView" destination="UGC-Fb-Juo" id="jJg-wy-HXw"/>
                 <outlet property="eImageView" destination="4Ma-cJ-R5h" id="nQg-E8-xcm"/>
                 <outlet property="eView" destination="Nno-Tp-rsz" id="WBE-au-fEs"/>
@@ -31,12 +32,39 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-cJ-R5h" userLabel="putAnytingHere">
                             <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         </imageView>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM3-7U-It4" userLabel="headerView2">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-sD-8XO">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FF8-2q-aKe">
+                                        <size key="itemSize" width="0.0" height="0.0"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <cells/>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="NuZ-sD-8XO" firstAttribute="top" secondItem="DM3-7U-It4" secondAttribute="top" id="Os3-Vb-YD2"/>
+                                <constraint firstItem="NuZ-sD-8XO" firstAttribute="trailing" secondItem="DM3-7U-It4" secondAttribute="trailing" id="Q8S-Sl-XCM"/>
+                                <constraint firstAttribute="bottom" secondItem="NuZ-sD-8XO" secondAttribute="bottom" id="drJ-VO-WIp"/>
+                                <constraint firstItem="NuZ-sD-8XO" firstAttribute="leading" secondItem="DM3-7U-It4" secondAttribute="leading" id="lV2-1L-a7Q"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="4Ma-cJ-R5h" firstAttribute="top" secondItem="Nno-Tp-rsz" secondAttribute="top" id="7ts-zK-SEJ"/>
+                        <constraint firstItem="DM3-7U-It4" firstAttribute="top" secondItem="Nno-Tp-rsz" secondAttribute="top" id="E8L-H7-6mj"/>
                         <constraint firstAttribute="bottom" secondItem="4Ma-cJ-R5h" secondAttribute="bottom" id="Iae-tx-kl7"/>
+                        <constraint firstAttribute="bottom" secondItem="DM3-7U-It4" secondAttribute="bottom" id="TkL-cj-vIw"/>
+                        <constraint firstItem="DM3-7U-It4" firstAttribute="leading" secondItem="Nno-Tp-rsz" secondAttribute="leading" id="afg-Ra-N8u"/>
                         <constraint firstAttribute="trailing" secondItem="4Ma-cJ-R5h" secondAttribute="trailing" id="gZm-Jz-UTE"/>
+                        <constraint firstAttribute="trailing" secondItem="DM3-7U-It4" secondAttribute="trailing" id="gvZ-CV-y4s"/>
                         <constraint firstAttribute="width" secondItem="Nno-Tp-rsz" secondAttribute="height" multiplier="2:1" id="hcf-ao-pnw"/>
                         <constraint firstAttribute="height" priority="999" constant="250" id="owK-ao-2Ue"/>
                         <constraint firstItem="4Ma-cJ-R5h" firstAttribute="leading" secondItem="Nno-Tp-rsz" secondAttribute="leading" id="pwX-oY-Bsk"/>

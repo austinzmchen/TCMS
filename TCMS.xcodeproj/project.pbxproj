@@ -39,6 +39,9 @@
 		C492D02C21724D65001FCEEC /* MBCollapsibleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02421724D65001FCEEC /* MBCollapsibleTableView.swift */; };
 		C492D02D21724D65001FCEEC /* MBCollapsibleTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D02521724D65001FCEEC /* MBCollapsibleTableViewFooter.swift */; };
 		C492D02E21724D65001FCEEC /* MBMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C492D02621724D65001FCEEC /* MBMenuTableCell.xib */; };
+		C492D0322173F54B001FCEEC /* TCDetailCollectionDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D0312173F54B001FCEEC /* TCDetailCollectionDataDelegate.swift */; };
+		C492D0342173FE37001FCEEC /* TCDetailTopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D0332173FE37001FCEEC /* TCDetailTopCollectionCell.swift */; };
+		C492D0362173FF23001FCEEC /* TCDetailTopCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C492D0352173FF23001FCEEC /* TCDetailTopCollectionCell.xib */; };
 		C49DCF67215C752D00B7A826 /* PTStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49DCF66215C752D00B7A826 /* PTStuff.storyboard */; };
 		C49DCF69215DD43200B7A826 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */; };
 		C49DCF70215DD6C800B7A826 /* ElasticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DCF6E215DD6C800B7A826 /* ElasticView.swift */; };
@@ -103,6 +106,9 @@
 		C492D02421724D65001FCEEC /* MBCollapsibleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableView.swift; sourceTree = "<group>"; };
 		C492D02521724D65001FCEEC /* MBCollapsibleTableViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCollapsibleTableViewFooter.swift; sourceTree = "<group>"; };
 		C492D02621724D65001FCEEC /* MBMenuTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBMenuTableCell.xib; sourceTree = "<group>"; };
+		C492D0312173F54B001FCEEC /* TCDetailCollectionDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailCollectionDataDelegate.swift; sourceTree = "<group>"; };
+		C492D0332173FE37001FCEEC /* TCDetailTopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTopCollectionCell.swift; sourceTree = "<group>"; };
+		C492D0352173FF23001FCEEC /* TCDetailTopCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCDetailTopCollectionCell.xib; sourceTree = "<group>"; };
 		C49DCF66215C752D00B7A826 /* PTStuff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PTStuff.storyboard; sourceTree = "<group>"; };
 		C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		C49DCF6E215DD6C800B7A826 /* ElasticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticView.swift; sourceTree = "<group>"; };
@@ -294,6 +300,7 @@
 				C410C1C8209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift */,
 				C49DCF68215DD43200B7A826 /* TCDetailViewController.swift */,
 				C41C631E216AAB8A006D9ABD /* TCDetailViewController+Orientation.swift */,
+				C492D0312173F54B001FCEEC /* TCDetailCollectionDataDelegate.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +399,8 @@
 			isa = PBXGroup;
 			children = (
 				C4E0E3EC209021D70031BBB8 /* TCMainTopCollectionCell.swift */,
+				C492D0332173FE37001FCEEC /* TCDetailTopCollectionCell.swift */,
+				C492D0352173FF23001FCEEC /* TCDetailTopCollectionCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -513,6 +522,7 @@
 				C4EB8DC52169963D00CD59D0 /* ElasticView.xib in Resources */,
 				C492D02821724D65001FCEEC /* MBCollapsibleTableViewHeader.xib in Resources */,
 				C4F5E3532022C4B800223DCC /* Main.storyboard in Resources */,
+				C492D0362173FF23001FCEEC /* TCDetailTopCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +626,7 @@
 				C49F61CC211F827300A94667 /* TCJsonEvent.swift in Sources */,
 				C4F5E3562022C4B800223DCC /* TCMS.xcdatamodeld in Sources */,
 				C490F4112026ABE600C370B2 /* TCDrawerViewController.swift in Sources */,
+				C492D0322173F54B001FCEEC /* TCDetailCollectionDataDelegate.swift in Sources */,
 				C410C1CA209412C700AD0033 /* InteractiveAnimatorDelegate+Factory.swift in Sources */,
 				C490F41E2026B2F400C370B2 /* TCCalendarViewController.swift in Sources */,
 				C492D02C21724D65001FCEEC /* MBCollapsibleTableView.swift in Sources */,
@@ -629,6 +640,7 @@
 				C492D02B21724D65001FCEEC /* MBCollapsibleTableViewDataDelegate.swift in Sources */,
 				C4A0BD0C209387BC001D1AF4 /* STTableHeroCell.swift in Sources */,
 				C4A0BD0B209387BC001D1AF4 /* STTableV2Cell.swift in Sources */,
+				C492D0342173FE37001FCEEC /* TCDetailTopCollectionCell.swift in Sources */,
 				C490F4182026AE0000C370B2 /* TCDrawerTableViewCell.swift in Sources */,
 				C410C1C9209412C700AD0033 /* InteractiveAnimatorDelegate.swift in Sources */,
 			);

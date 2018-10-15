@@ -215,8 +215,32 @@
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avb-gU-7xT" customClass="ACGradientView" customModule="ACKit">
                                         <rect key="frame" x="0.0" y="276" width="414" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW7-BD-O5F" userLabel="header2InfoView">
+                                                <rect key="frame" x="0.0" y="20" width="414" height="30"/>
+                                                <subviews>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7dl-TD-nZB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </pageControl>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="7dl-TD-nZB" firstAttribute="top" secondItem="QW7-BD-O5F" secondAttribute="top" id="E1I-F9-Vky"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7dl-TD-nZB" secondAttribute="bottom" id="Lb1-4g-ZjO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7dl-TD-nZB" secondAttribute="trailing" id="leg-MR-oZP"/>
+                                                    <constraint firstItem="7dl-TD-nZB" firstAttribute="leading" secondItem="QW7-BD-O5F" secondAttribute="leading" id="vqV-fP-oeo"/>
+                                                    <constraint firstAttribute="height" constant="30" id="y0l-3D-yZE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QW7-BD-O5F" secondAttribute="trailing" id="C0Z-mC-CXN"/>
+                                            <constraint firstItem="QW7-BD-O5F" firstAttribute="leading" secondItem="Avb-gU-7xT" secondAttribute="leading" id="Ree-Ni-JI0"/>
+                                            <constraint firstAttribute="bottom" secondItem="QW7-BD-O5F" secondAttribute="bottom" id="a47-s2-LyF"/>
                                             <constraint firstAttribute="height" constant="50" id="snF-hC-6nH">
                                                 <variation key="heightClass=compact" constant="0.0"/>
                                             </constraint>
@@ -334,6 +358,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <outlet property="elasticHeaderView" destination="bAr-2b-wWZ" id="xjm-uD-vJE"/>
                         <outlet property="gradientView" destination="Avb-gU-7xT" id="BGk-7p-hHS"/>
                         <outlet property="infoView" destination="QpF-SO-0BJ" id="jzJ-mm-tfq"/>
+                        <outlet property="pageControl" destination="7dl-TD-nZB" id="xcU-wP-lDq"/>
                         <outlet property="textView" destination="qYq-zG-W3b" id="1Fg-zA-mpQ"/>
                         <outlet property="titleLabel" destination="g97-32-3r4" id="Gz3-cF-92L"/>
                     </connections>

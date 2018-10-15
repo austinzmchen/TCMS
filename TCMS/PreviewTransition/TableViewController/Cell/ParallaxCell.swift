@@ -144,16 +144,13 @@ extension ParallaxCell {
         for attribute: NSLayoutConstraint.Attribute in [.left, .right] {
             (contentView, titleLabel) >>>- {
                 $0.attribute = attribute
+                $0.constant = 15.0
                 return
             }
         }
         parallaxTitleY = (contentView, titleLabel) >>>- {
-            $0.attribute = .centerY
-            return
-        }
-        titleLabel >>>- {
-            $0.attribute = .height
-            $0.constant = bounds.height + difference
+            $0.attribute = .bottom
+            $0.constant = -10.0
             return
         }
         parallaxTitle = titleLabel
@@ -360,8 +357,7 @@ extension ParallaxCell {
         let label = UILabel()
         label.backgroundColor = .clear
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textColor = .white
         contentView.addSubview(label)
         return label

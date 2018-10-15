@@ -75,6 +75,14 @@ public class DemoDetailViewController: PTDetailViewController {
         bgImageView.sdSetImage(withString: event?.images.first?.path)
         titleLabel.text = event?.title
         textView.text = event?.desc
+        
+        isFullScreened = true // load without
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        isFullScreened = false
     }
     
     @objc private func tapped(_ target: Any) {

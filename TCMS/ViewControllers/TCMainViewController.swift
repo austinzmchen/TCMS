@@ -163,7 +163,7 @@ extension TCMainViewController: UITableViewDelegate, UITableViewDataSource {
         let event = events[indexPath.row]
         if event.isHero {
             // return 180
-            return 240
+            return 140
         }
         return 107
     }

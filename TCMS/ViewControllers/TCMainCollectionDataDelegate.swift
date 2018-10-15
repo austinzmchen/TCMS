@@ -82,10 +82,10 @@ extension TCMainCollectionDataDelegate: UIScrollViewDelegate {
     }
 }
 
-let kAccountCarouselWidthHeightRatio: CGFloat = 374.0 / 210.0
-let kAccountCarouselXMargin: CGFloat = 20.0
-let kAccountCarouselYMargin: CGFloat = 10.0
-let kAccountCarouselPeek: CGFloat = 20.0
+private let kAccountCarouselWidthHeightRatio: CGFloat = 374.0 / 210.0
+private let kAccountCarouselXMargin: CGFloat = 20.0
+private let kAccountCarouselYMargin: CGFloat = 10.0
+private let kAccountCarouselPeek: CGFloat = 20.0
 
-let kAccountCarouselWidth: CGFloat = UIScreen.main.bounds.width - 2 * kAccountCarouselXMargin - kAccountCarouselPeek
-let kAccountCarouselHeight: CGFloat = UIScreen.main.bounds.width / kAccountCarouselWidthHeightRatio
+private let kAccountCarouselWidth: CGFloat = UIScreen.main.bounds.width - 2 * kAccountCarouselXMargin - kAccountCarouselPeek
+private let kAccountCarouselHeight: CGFloat = UIScreen.main.bounds.width / kAccountCarouselWidthHeightRatio

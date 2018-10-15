@@ -184,6 +184,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="210"/>
                                                     </imageView>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="AUA-5E-9vq" firstAttribute="leading" secondItem="dgt-IF-uHG" secondAttribute="leading" id="1BX-Tr-gbc"/>
                                                     <constraint firstItem="AUA-5E-9vq" firstAttribute="top" secondItem="dgt-IF-uHG" secondAttribute="top" id="39c-kc-9Yy"/>

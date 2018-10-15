@@ -36,6 +36,9 @@ class ElasticView: UIView {
     @IBOutlet weak var eViewCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var eViewEqualHeightToContentViewConstraint: NSLayoutConstraint!
     
+    // custom outlets
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var maxExpandableHeight: CGFloat = kDefaultMaxExpandableHeight {
         didSet {
             eView.constraints.front{$0.firstAttribute == .height}?.constant = maxExpandableHeight

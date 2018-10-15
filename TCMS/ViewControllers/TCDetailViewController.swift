@@ -15,6 +15,7 @@ class TCDetailViewController: UIViewController {
     @IBOutlet var blurView: UIVisualEffectView!
     
     @IBOutlet weak var gradientView: ACGradientView!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var infoView: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,6 +28,10 @@ class TCDetailViewController: UIViewController {
     // methods
     var noteTokenBag = ACNoteObserverTokenBag()
     var event: TCJsonEvent?
+    
+    private lazy var collectionDataDelegate: TCDetailCollectionDataDelegate? = {
+        return TCDetailCollectionDataDelegate(fromViewController: self)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +46,11 @@ class TCDetailViewController: UIViewController {
         elasticHeaderView.eImageView.sdSetImage(withString: event?.images.first?.path)
         titleLabel.text = event?.title
         textView.text = event?.desc
+        
+        elasticHeaderView.collectionView.register(UINib(nibName: "TCDetailTopCollectionCell", bundle: nil), forCellWithReuseIdentifier: "kDetailCollectionCell")
+        elasticHeaderView.collectionView.delegate = collectionDataDelegate
+        elasticHeaderView.collectionView.dataSource = collectionDataDelegate
+        elasticHeaderView.collectionView.decelerationRate = UIScrollViewDecelerationRateFast // control speed for
         
         adjustOrientation()
         addOrientationChangeObserver()
